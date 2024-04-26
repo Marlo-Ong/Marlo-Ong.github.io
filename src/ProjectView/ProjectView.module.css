@@ -1,0 +1,20 @@
+.project {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px;
+}
+
+.socials {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.projectImg {
+    max-width: 75%;
+    object-fit: contain;
+    object-position: center;
+    border: 3px solid white;
+    border-radius: 20px;
+}
