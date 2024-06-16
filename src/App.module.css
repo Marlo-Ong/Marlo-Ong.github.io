@@ -1,12 +1,10 @@
 .socialsView {
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    margin: 10px;
     justify-content: space-evenly;
 }
 
-/* .projectsView {
-    border: 2px solid gray;
-    border-radius: 10px;
-    padding: 50px
-} */
+.appView > h1 {
+    font-size: 100px;
+}

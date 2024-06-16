@@ -13,7 +13,7 @@ import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
 import WordHunt from "./public/wordhunt.jpg"
 
-// Social Media
+// Social Media Templates
 const github : SocialLinkProps = {
   link: "https://github.com/Marlo-Ong",
   alttext: "GitHub logo",
@@ -29,82 +29,86 @@ const linkedin : SocialLinkProps = {
 }
 
 const gmail : SocialLinkProps = {
-  link: "moon.ongkingco@outlook.com",
+  link: "mailto:moon.ongkingco@outlook.com",
   alttext: "Gmail Logo",
   image: GmailLogo,
-  domain: "moon.ongkingco@outlook.com"
+  domain: "Email"
 }
 
 const socialMediaLinks : SocialLinkProps[] = [
   github, linkedin, gmail
 ];
 
-// Projects
-const project1Github : SocialLinkProps = {
-  ...github,
-  link: "https://github.com/elenachau/techwise-kuddelmuddel",
+// Project Links
+function Github(link: string)
+{
+  var githubProps : SocialLinkProps = {
+    ...github,
+    link: link
+  }
+  return <SocialLink {...githubProps}/>
 }
 
-const project1itch : SocialLinkProps = {
-  link: "https://mkingco.itch.io/kuddelmuddel",
-  alttext: "HTML Logo",
-  image: HTMLLogo,
-  domain: "itch.io"
+function itchIO(link: string)
+{
+  var itchioProps : SocialLinkProps = {
+    link: "https://mkingco.itch.io/" + link,
+    alttext: "HTML Logo",
+    image: HTMLLogo,
+    domain: "itch.io"
+  }
+  return <SocialLink {...itchioProps}/>
 }
-
-const project1Socials = [project1Github, project1itch];
 
 const project1 : ProjectViewProps = {
-  name: "Kuddelmuddel Web Game",
-  subtitle: "Techwise Project 1",
+  name: "Kuddelmuddel",
+  subtitle: "Grow weeds and take over the Earth!",
+  
+  date: "June 2023 - August 2023",
+  purpose: "Techwise Course 1 Capstone Project",
+  roles: ["Game Programmer", "Audio Engineer"],
+
   description: "Kuddelmuddel is an incremental mobile game where you grow weeds, grow some more weeds, and grow even more weeds! \
   Created as a part of Techwise's Course 1 capstone project, I had a hand in coding the foundational game state logic, creating C# developer tools for my fellow teammates, making the frame-by-frame animations, and implementing (and choosing) all of the music and SFX you hear in the game.",
-
-  link: "https://mkingco.itch.io/kuddelmuddel",
   image: Kuddelmuddel,
-  alttext: "A screenshot of Kuddelmuddel's gameplay",
-
   skills: ["Unity", "C#", "WebGL"],
-  children: project1Socials.map((args) => (<SocialLink {...args}/>)),
-  game: WebGLGame("../../kuddelmuddel-webgl-gzip-v4/index.html")
+  
+  socials: [Github("https://github.com/elenachau/techwise-kuddelmuddel"), itchIO("kuddelmuddel")],
 }
 
 const project2 : ProjectViewProps = {
-  name: "Project Arecibo - Communications Website",
-  subtitle: "Techwise Project 2",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. At varius vel pharetra vel turpis nunc. Aliquam nulla facilisi cras fermentum. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Molestie nunc non blandit massa enim. Lacinia quis vel eros donec ac odio tempor orci dapibus. Mauris sit amet massa vitae tortor condimentum lacinia quis. Dictum non consectetur a erat nam at. Sed libero enim sed faucibus turpis.",
+  name: "Project Arecibo",
+  subtitle: "Send messages to the future.",
 
-  link: "https://github.com/ChrisTutje/TechwiseCommunicationsApp",
+  date: "January 2024 - March 2024",
+  purpose: "Techwise Course 2 Capstone Project",
+  roles: ["Back-End Developer"],
+
+  description: "My first foray into web development, I helped administer the user authentication and authorization functionality from our MongoDB database, as well as create corresponding login and registration pages. I then converted our website from base HTML to the .ejs template, to allow our home page to dynamically display user data. I also played an assistive role both by debugging the back-end logic and by cleaning up front-end issues. ",
   image: Arecibo,
-  alttext: "A screenshot of Project Arecibo",
+  skills: ["HTML/CSS", "AWS", "MongoDB", "Express.js", "JavaScript", "Github Issues"],
 
-  skills: ["HTML/CSS", "AWS", "MongoDB"],
+  socials: [Github("https://github.com/ChrisTutje/TechwiseCommunicationsApp")],
 }
 
 const project3 : ProjectViewProps = {
-  name: "Word Hunt Recreation",
-  subtitle: "Unity Game",
-  description: "Lorem ipsump dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. At varius vel pharetra vel turpis nunc. Aliquam nulla facilisi cras fermentum. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Molestie nunc non blandit massa enim. Lacinia quis vel eros donec ac odio tempor orci dapibus. Mauris sit amet massa vitae tortor condimentum lacinia quis. Dictum non consectetur a erat nam at. Sed libero enim sed faucibus turpis.",
+  name: "Word Hunt Recreated",
+  subtitle: "The classic GamePigeon game now playable on the web!",
 
-  link: "https://mkingco.itch.io/gamepigeon-word-hunt",
+  date: "January 2024",
+  purpose: "Personal Project",
+  roles: ["Solo Developer"],
+
+  description: "A 2-day recreation of the iPhone game in Unity. I wanted to recreate the game exactly, so I utilized the game's own assets, sounds, and dictionaries to make it as indistinguishable as possible. Future plans to expand the project are to add custom board creation, shareable board links, match history, timed runs/speedruns, a high score leaderboard, and potentially online multiplayer.",
   image: WordHunt,
-  alttext: "A screenshot of Word Hunt",
-
   skills: ["Unity", "C#"],
+
+  socials: [Github("https://github.com/Marlo-Ong/word-hunt-recreated"), itchIO("gamepigeon-word-hunt")],
 }
 
 const projects : ProjectViewProps[] = [
   project1, project2, project3
 ];
-
-function WebGLGame(path : string)
-{
-  return (
-    <div>
-      <iframe src={path} width="960" height="650"></iframe>
-    </div>
-  )
-}
 
 function App() {
   // const [projectState, setProjectState] = useState(projects);
@@ -115,8 +119,8 @@ function App() {
   // };
 
   return (
-    <div>
-      <h1>MARLO ONGKINGCO</h1>
+    <div className={classes.appView}>
+      <h1>Marlo Ongkingco</h1>
 
       <div className={classes.socialsView}>
         {socialMediaLinks.map((args) => (<SocialLink {...args}/> ))}

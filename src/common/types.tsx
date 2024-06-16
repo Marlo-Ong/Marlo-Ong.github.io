@@ -8,11 +8,18 @@ export interface SocialLinkProps extends ImageLink {
     domain: string,
 }
 
-export interface ProjectViewProps extends ImageLink {
+export interface ProjectViewProps {
     name: string,
     subtitle: string,
+
+    date: string,
+    purpose: string,
+    roles?: string[],
+
+    image?: string,
     description: string,
     skills: string[],
-    children?: JSX.Element[],
+
+    socials?: JSX.Element[],
     game?: JSX.Element,
 }
