@@ -57,7 +57,8 @@ const project1Socials = [project1Github, project1itch];
 const project1 : ProjectViewProps = {
   name: "Kuddelmuddel Web Game",
   subtitle: "Techwise Project 1",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. At varius vel pharetra vel turpis nunc. Aliquam nulla facilisi cras fermentum. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Molestie nunc non blandit massa enim. Lacinia quis vel eros donec ac odio tempor orci dapibus. Mauris sit amet massa vitae tortor condimentum lacinia quis. Dictum non consectetur a erat nam at. Sed libero enim sed faucibus turpis.",
+  description: "Kuddelmuddel is an incremental mobile game where you grow weeds, grow some more weeds, and grow even more weeds! \
+  Created as a part of Techwise's Course 1 capstone project, I had a hand in coding the foundational game state logic, creating C# developer tools for my fellow teammates, making the frame-by-frame animations, and implementing (and choosing) all of the music and SFX you hear in the game.",
 
   link: "https://mkingco.itch.io/kuddelmuddel",
   image: Kuddelmuddel,
@@ -65,6 +66,7 @@ const project1 : ProjectViewProps = {
 
   skills: ["Unity", "C#", "WebGL"],
   children: project1Socials.map((args) => (<SocialLink {...args}/>)),
+  game: WebGLGame("../../kuddelmuddel-webgl-gzip-v4/index.html")
 }
 
 const project2 : ProjectViewProps = {
@@ -95,6 +97,15 @@ const projects : ProjectViewProps[] = [
   project1, project2, project3
 ];
 
+function WebGLGame(path : string)
+{
+  return (
+    <div>
+      <iframe src={path} width="960" height="650"></iframe>
+    </div>
+  )
+}
+
 function App() {
   // const [projectState, setProjectState] = useState(projects);
 
@@ -114,10 +125,6 @@ function App() {
       <div className={classes.projectsView}>
         {projects.map((args) => (<Project {...args}/> ))}
       </div>
-
-      <iframe src="https://itch.io/embed/2249337" width="552" height="167"><a href="https://mkingco.itch.io/kuddelmuddel">Kuddelmuddel by mkingco</a></iframe>
-      <iframe src="../kuddelmuddel-webgl-gzip-v4/index.html" width="960" height="650"></iframe>
-
     </div>
   );
 }

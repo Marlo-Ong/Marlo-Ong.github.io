@@ -14,4 +14,5 @@ export interface ProjectViewProps extends ImageLink {
     description: string,
     skills: string[],
     children?: JSX.Element[],
+    game?: JSX.Element,
 }

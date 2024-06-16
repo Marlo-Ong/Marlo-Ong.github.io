@@ -3,7 +3,7 @@ import { ProjectViewProps } from "../common/types";
 // import { SocialLink } from "../SocialLink/SocialLink";
 import classes from "./ProjectView.module.css"
 
-export const Project: FC<ProjectViewProps> = ({ image, alttext, link, description, name, skills, subtitle, children }: ProjectViewProps) => {
+export const Project: FC<ProjectViewProps> = ({ image, alttext, link, description, name, skills, subtitle, children, game }: ProjectViewProps) => {
     return (
         <div className={classes.project}>
             <h1>
@@ -18,6 +18,8 @@ export const Project: FC<ProjectViewProps> = ({ image, alttext, link, descriptio
             <div className={classes.socials}>
                 {children}
             </div>
+            
+            {game}
         </div>
     );
 }
