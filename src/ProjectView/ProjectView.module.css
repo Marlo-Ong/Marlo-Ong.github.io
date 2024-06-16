@@ -1,9 +1,19 @@
 .project {
+    flex: 1;
+    background-color: #242424;
     border: 2px solid gray;
     border-radius: 10px;
     margin: 40px;
-    padding-top: 50px;
-    font-size: x-large;
+    padding: 40px;
+    font-size: small;
+    min-width: 20%;
+    max-width: 20%;
+}
+
+@media (max-width: 800px) {
+    .project {
+        max-width: 90%;
+    }
 }
 
 h1, h2{
@@ -16,7 +26,7 @@ h2 {
 }
 
 .metadata {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 p > span {
@@ -41,10 +51,7 @@ p > span {
     object-position: center;
     border: 3px solid white;
     border-radius: 20px;
-}
-
-.projectContent {
-    margin: 50px;
+    margin: 20px;
 }
 
 .tagItem{

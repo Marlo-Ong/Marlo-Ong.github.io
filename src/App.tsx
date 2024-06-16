@@ -78,7 +78,7 @@ const project1 : ProjectViewProps = {
 
 const project2 : ProjectViewProps = {
   name: "Project Arecibo",
-  subtitle: "Send messages to the future.",
+  subtitle: "Send future messages through space.",
 
   date: "January 2024 - March 2024",
   purpose: "Techwise Course 2 Capstone Project",
@@ -93,7 +93,7 @@ const project2 : ProjectViewProps = {
 
 const project3 : ProjectViewProps = {
   name: "Word Hunt Recreated",
-  subtitle: "The classic GamePigeon game now playable on the web!",
+  subtitle: "The classic GamePigeon game.",
 
   date: "January 2024",
   purpose: "Personal Project",
@@ -107,7 +107,7 @@ const project3 : ProjectViewProps = {
 }
 
 const projects : ProjectViewProps[] = [
-  project1, project2, project3
+  project1, project2, project3, project1, project1
 ];
 
 function App() {
@@ -120,10 +120,16 @@ function App() {
 
   return (
     <div className={classes.appView}>
-      <h1>Marlo Ongkingco</h1>
 
-      <div className={classes.socialsView}>
-        {socialMediaLinks.map((args) => (<SocialLink {...args}/> ))}
+      <div className={classes.banner}>
+        <div className={classes.header}>
+          <h1>Marlo Ongkingco</h1>
+          <h2>Game programming, software development, audio engineering</h2>
+
+          <div className={classes.socialsView}>
+            {socialMediaLinks.map((args) => (<SocialLink {...args}/> ))}
+          </div>
+        </div>
       </div>
 
       <div className={classes.projectsView}>
