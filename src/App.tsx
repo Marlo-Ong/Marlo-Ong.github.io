@@ -1,9 +1,9 @@
 import "./App.css"
-// import { useState } from "react";
 import classes from "./App.module.css"
 import { SocialLink } from "./SocialLink/SocialLink"
 import { Project } from "./ProjectView/ProjectView"
 import { SocialLinkProps, ProjectViewProps } from "./common/types";
+// import ImageCarousel from "./Carousel/Carousel";
 
 import GithubLogo from "./public/White/Github_white.png"
 import HTMLLogo from "./public/White/HTML5_white.png"
@@ -12,6 +12,8 @@ import GmailLogo from "./public/White/Gmail_white.png"
 import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
 import WordHunt from "./public/wordhunt.jpg"
+import Infinitrivia from "./public/infinitrivia.png"
+import Soupasaurus from "./public/soupasaurus.png"
 
 // Social Media Templates
 const github : SocialLinkProps = {
@@ -69,22 +71,26 @@ const project1 : ProjectViewProps = {
   roles: ["Game Programmer", "Audio Engineer"],
 
   description: "Kuddelmuddel is an incremental mobile game where you grow weeds, grow some more weeds, and grow even more weeds! \
-  Created as a part of Techwise's Course 1 capstone project, I had a hand in coding the foundational game state logic, creating C# developer tools for my fellow teammates, making the frame-by-frame animations, and implementing (and choosing) all of the music and SFX you hear in the game.",
+  Created as a part of Techwise's Course 1 capstone project, I had a hand in coding the foundational game state logic, creating C# \
+  developer tools for my fellow teammates, making the frame-by-frame animations, and implementing (and choosing) all of the music and SFX you hear in the game.",
   image: Kuddelmuddel,
-  skills: ["Unity", "C#", "WebGL"],
+  skills: ["Unity", "C#", "Data Structures", "UI/UX"],
   
   socials: [Github("https://github.com/elenachau/techwise-kuddelmuddel"), itchIO("kuddelmuddel")],
 }
 
 const project2 : ProjectViewProps = {
   name: "Project Arecibo",
-  subtitle: "Send future messages through space.",
+  subtitle: "Send messages to the future.",
 
   date: "January 2024 - March 2024",
   purpose: "Techwise Course 2 Capstone Project",
   roles: ["Back-End Developer"],
 
-  description: "My first foray into web development, I helped administer the user authentication and authorization functionality from our MongoDB database, as well as create corresponding login and registration pages. I then converted our website from base HTML to the .ejs template, to allow our home page to dynamically display user data. I also played an assistive role both by debugging the back-end logic and by cleaning up front-end issues. ",
+  description: "My first foray into web development, I helped administer the user authentication and authorization functionality \
+  from our MongoDB database, as well as create corresponding login and registration pages. I then converted our website from base \
+  HTML to the .ejs template, to allow our home page to dynamically display user data. I also played an assistive role both by \
+  debugging the back-end logic and by cleaning up front-end issues. ",
   image: Arecibo,
   skills: ["HTML/CSS", "AWS", "MongoDB", "Express.js", "JavaScript", "Github Issues"],
 
@@ -99,25 +105,55 @@ const project3 : ProjectViewProps = {
   purpose: "Personal Project",
   roles: ["Solo Developer"],
 
-  description: "A 2-day recreation of the iPhone game in Unity. I wanted to recreate the game exactly, so I utilized the game's own assets, sounds, and dictionaries to make it as indistinguishable as possible. Future plans to expand the project are to add custom board creation, shareable board links, match history, timed runs/speedruns, a high score leaderboard, and potentially online multiplayer.",
+  description: "A 2-day recreation of the iPhone game in Unity. I wanted to recreate the game exactly, so I utilized the game's \
+  own assets, sounds, and dictionaries to make it as indistinguishable as possible. Future plans to expand the project are to \
+  add custom board creation, shareable board links, match history, timed runs/speedruns, a high score leaderboard, and potentially online multiplayer.",
   image: WordHunt,
   skills: ["Unity", "C#"],
 
   socials: [Github("https://github.com/Marlo-Ong/word-hunt-recreated"), itchIO("gamepigeon-word-hunt")],
 }
 
+const project4 : ProjectViewProps = {
+  name: "Infinitrivia",
+  subtitle: "Limitless trivia powered by ChatGPT.",
+
+  date: "April 2024",
+  purpose: "\"Biggest Little Hackathon 2024\" Entry",
+  roles: ["Solo Developer", "Prompt Engineer", "Game Programmer", "Artist", "Audio Engineer"],
+
+  description: "A short trivia game made in 36 hours as part of the ACM chapter at University of Nevada, Reno. \
+  Inspired by games such as JackBox Party Pack and the Impossible Quiz, I went for a cohesive but playful design. I made all the visual assets, \
+  including a custom hand-drawn font, logo, and buttons. I tested several OpenAI prompts to retrieve consistent trivia questions and answers.\
+  I used MockAPI to read and store created questions to save tokens.",
+  image: Infinitrivia,
+  skills: ["Unity", "C#", "REST APIs", "OpenAI API", "Visual Design", "Databasing", "Prompt Engineering"],
+
+  socials: [Github("https://github.com/Marlo-Ong/infinitrivia"), itchIO("infinitrivia")],
+}
+
+const project5 : ProjectViewProps = {
+  name: "Soupasaurus",
+  subtitle: "What kind of soup would you be?",
+
+  date: "April 2024",
+  purpose: "\"LA Hacks 2024\" Entry",
+  roles: ["Game Programmer", "Front-End Developer"],
+
+  description: "Made in collaboration with University of California, San Diego students. I wrote inspector tools to interface \
+  Unity C# scripting with the editor, facilitating an easier design and animation workflow for our front-end developers. \
+  I also wrote the logic to communicate with our custom Python backend and display the output of a Google Gemini prompt.",
+  image: Soupasaurus,
+  skills: ["Unity", "C#", "Python", "Google Gemini API"],
+
+  socials: [Github("https://github.com/Marlo-Ong/soupasaurus"), itchIO("soupasaurus")],
+}
+
 const projects : ProjectViewProps[] = [
-  project1, project2, project3, project1, project1
+  project1, project2, project5, project4, project3
 ];
 
 function App() {
-  // const [projectState, setProjectState] = useState(projects);
-
-  // function toggleExpand(element: ProjectViewProps) {
-  //   element.expanded = !element.expanded;
-  //   setProjectState([...projectState]);
-  // };
-
   return (
     <div className={classes.appView}>
 
@@ -135,6 +171,8 @@ function App() {
       <div className={classes.projectsView}>
         {projects.map((args) => (<Project {...args}/> ))}
       </div>
+
+      {/* {ImageCarousel()} */}
     </div>
   );
 }

@@ -46,12 +46,14 @@ p > span {
 }
 
 .projectImg {
-    max-width: 75%;
+    margin: 10px;
+    min-width: 90%;
+    max-height: 20%;
+    background-size: 100%;
     object-fit: contain;
     object-position: center;
     border: 3px solid white;
     border-radius: 20px;
-    margin: 20px;
 }
 
 .tagItem{

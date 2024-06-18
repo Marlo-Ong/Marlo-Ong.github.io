@@ -15,7 +15,9 @@ export const Project: FC<ProjectViewProps> = ({ image, description, name, skills
                 <p><span>Roles:</span> {roles?.join(', ')}</p>
             </div>
 
-            <img className={classes.projectImg} src={image}/>
+            <div className={classes.imgContainer}>
+                <img className={classes.projectImg} src={image}/>
+            </div>
 
             <div className={classes.projectContent}>
                 <div>{description}</div>
