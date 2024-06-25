@@ -1,11 +1,16 @@
 import { FC } from "react";
 import { ProjectViewProps } from "../common/types";
-// import { SocialLink } from "../SocialLink/SocialLink";
+import CSS from "csstype";
+import * as css from "./customfonts.css";
 import classes from "./ProjectView.module.css"
+
+const titleStyle: CSS.Properties = {
+    fontFamily: "Infinitrivia-Regular",
+}
 
 export const Project: FC<ProjectViewProps> = ({ image, description, name, skills, subtitle, date, purpose, roles, socials }: ProjectViewProps) => {
     return (
-        <div className={classes.project}>
+        <div className={classes.project} style={titleStyle}>
             <h1>{name}</h1>
             <h2>{subtitle}</h2>
 
