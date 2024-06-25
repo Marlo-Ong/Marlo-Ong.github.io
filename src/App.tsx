@@ -14,6 +14,7 @@ import Arecibo from "./public/arecibo.png"
 import WordHunt from "./public/wordhunt.jpg"
 import Infinitrivia from "./public/infinitrivia.png"
 import Soupasaurus from "./public/soupasaurus.png"
+import SillyBilly from "./public/sillybilly.png"
 
 // Social Media Templates
 const github : SocialLinkProps = {
@@ -99,7 +100,7 @@ const project2 : ProjectViewProps = {
 
 const project3 : ProjectViewProps = {
   name: "Word Hunt Recreated",
-  subtitle: "The classic GamePigeon game.",
+  subtitle: "The classic GamePigeon game, now on the Web.",
 
   date: "January 2024",
   purpose: "Personal Project",
@@ -149,8 +150,26 @@ const project5 : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/soupasaurus"), itchIO("soupasaurus")],
 }
 
+const project6 : ProjectViewProps = {
+  name: "Silly Billy's Chromatic Chaos",
+  subtitle: "Bureacracy for iPad kids!",
+
+  date: "April 2023",
+  purpose: "\"Biggest Little Hackathon 2023\" Entry",
+  roles: ["Game Programmer", "Composer"],
+
+  description: "My first ever Unity game for my first ever Hackathon! Created alongside some UNR friends, \
+  it was a steep learning experience jumping into C# and the Unity API for the first time, especially on a time crunch,\
+  but it was also my first introduction to design patterns like using singletons and factories and coroutines. \
+  Despite the challenges, we were able to pull off a game with awesome art, custom-made sounds, and a funny premise.",
+  image: SillyBilly,
+  skills: ["Unity", "C#", "Design Patterns", "Music Composition", "Sound Design", "Teamwork"],
+
+  socials: [Github("https://github.com/SapphireGaze/chromatic-chaos"), itchIO("silly-billiess-chromatic-chaos")],
+}
+
 const projects : ProjectViewProps[] = [
-  project1, project2, project5, project4, project3
+  project1, project2, project5, project4, project3, project6
 ];
 
 function App() {
