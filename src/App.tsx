@@ -151,7 +151,7 @@ const project5 : ProjectViewProps = {
 }
 
 const project6 : ProjectViewProps = {
-  name: "Silly Billy's Chromatic Chaos",
+  name: "Silly Billies' Chromatic Chaos",
   subtitle: "Bureacracy for iPad kids!",
 
   date: "April 2023",
@@ -161,7 +161,7 @@ const project6 : ProjectViewProps = {
   description: "My first ever Unity game for my first ever Hackathon! Created alongside some UNR friends, \
   it was a steep learning experience jumping into C# and the Unity API for the first time, especially on a time crunch,\
   but it was also my first introduction to design patterns like using singletons and factories and coroutines. \
-  Despite the challenges, we were able to pull off a game with awesome art, custom-made sounds, and a funny premise.",
+  Despite the challenges, we were able to pull off a game with awesome art, custom-made sounds, and a hilarious premise.",
   image: SillyBilly,
   skills: ["Unity", "C#", "Design Patterns", "Music Composition", "Sound Design", "Teamwork"],
 
@@ -169,7 +169,7 @@ const project6 : ProjectViewProps = {
 }
 
 const projects : ProjectViewProps[] = [
-  project1, project2, project5, project4, project3, project6
+  project1, project2, project4, project5, project3, project6
 ];
 
 function App() {
