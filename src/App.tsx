@@ -7,6 +7,7 @@ import { SocialLinkProps, ProjectViewProps } from "./common/types";
 // import ImageCarousel from "./Carousel/Carousel";
 
 import GithubLogo from "./public/Black/Github_black.png"
+import YoutubeLogo from "./public/Black/Youtube_black.png"
 import HTMLLogo from "./public/Black/HTML5_black.png"
 import LinkedinLogo from "./public/Black/LinkedIN_black.png"
 import GmailLogo from "./public/Black/Gmail_black.png"
@@ -39,8 +40,15 @@ const gmail : SocialLinkProps = {
   domain: "Email",
 }
 
+const youtube : SocialLinkProps = {
+  link: "https://www.youtube.com/channel/UCvuFxj0nn0lfNLO-Zrhlb0A",
+  alttext: "YouTube logo",
+  image: YoutubeLogo,
+  domain: "Youtube"
+}
+
 const socialMediaLinks : SocialLinkProps[] = [
-  github, linkedin, gmail
+  github, linkedin, youtube, gmail
 ];
 
 // Project Links
@@ -65,6 +73,20 @@ function itchIO(link: string)
   return <SocialLink {...itchioProps}/>
 }
 
+function Youtube(link: string, title?: string, isActionButton?: boolean)
+{
+  var youtubeProps : SocialLinkProps = {
+    ...youtube,
+    link: link,
+    domain: title ?? "Watch Now!",
+    }
+
+  if (isActionButton)
+    youtubeProps.cssClasses = [socialLinkClassses.actionButton]
+
+  return <SocialLink {...youtubeProps}/>
+}
+
 const kuddelmuddel : ProjectViewProps = {
   name: "Kuddelmuddel",
   subtitle: "Grow weeds and take over the Earth!",
@@ -79,7 +101,11 @@ const kuddelmuddel : ProjectViewProps = {
   image: Kuddelmuddel,
   skills: ["Unity", "C#", "Data Structures", "UI/UX"],
   
-  socials: [Github("https://github.com/elenachau/techwise-kuddelmuddel"), itchIO("kuddelmuddel")],
+  socials: [
+    Github("https://github.com/elenachau/techwise-kuddelmuddel"),
+    Youtube("https://www.youtube.com/watch?v=_nOwZ7wz6nY", "Trailer"),
+    itchIO("kuddelmuddel")
+  ],
 }
 
 const arecibo : ProjectViewProps = {
@@ -167,7 +193,10 @@ const sillybilly : ProjectViewProps = {
   image: SillyBilly,
   skills: ["Unity", "C#", "Design Patterns", "Music Composition", "Sound Design", "Teamwork"],
 
-  socials: [Github("https://github.com/SapphireGaze/chromatic-chaos"), itchIO("silly-billiess-chromatic-chaos")],
+  socials: [
+    Github("https://github.com/SapphireGaze/chromatic-chaos"),
+    Youtube("https://www.youtube.com/watch?v=KLmcro7wXwI", "Music"),
+    itchIO("silly-billiess-chromatic-chaos")],
 }
 
 const projects : ProjectViewProps[] = [
