@@ -1,4 +1,5 @@
 import { ProjectViewProps } from "./common/types";
+import { Github, Youtube, itchIO } from "./Socials";
 
 import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
@@ -6,7 +7,9 @@ import WordHunt from "./public/wordhunt.jpg"
 import Infinitrivia from "./public/infinitrivia.png"
 import Soupasaurus from "./public/soupasaurus.png"
 import SillyBilly from "./public/sillybilly.png"
- import { Github, Youtube, itchIO } from "./Socials";
+import Epilogue from "./public/epilogue.png"
+import Minimal from "./public/minimal.png"
+import Silliness from "./public/silliness.png"
 
 
 const kuddelmuddel : ProjectViewProps = {
@@ -121,7 +124,59 @@ const sillybilly : ProjectViewProps = {
     itchIO("silly-billiess-chromatic-chaos")],
 }
 
+const epilogue : ProjectViewProps = {
+  name: "Epilogue",
+  subtitle: "A journey of a sphere in space.",
+
+  date: "January 2021 - April 2021",
+  purpose: "LVA Jazz Class: Semester 2 Video Project",
+  roles: ["3D Animator", "Music Arranger & Composer", "Audio Engineer", "Video Editor"],
+
+  description: "My first ever 3D animation using Blender. Inspired by the feeling of separation evoked by high school graduations \
+  during the pandemic, the animation follows pieces of a whole that are forced apart, but eventually come back together. \
+  I created the orchestral arrangement of Bill Evans's \"Epilogue\", using personal recordings of bells, shakers, and my own voice for texture.",
+  image: Epilogue,
+  skills: ["Blender", "Cakewalk DAW", "Musescore", "DaVinci Resolve", "Recording/Mixing/Mastering"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=nCfQIgI1Hks", "Watch Here!", true)],
+}
+
+const minimal : ProjectViewProps = {
+  name: "Minimal",
+  subtitle: "Instruments-in-a-box!",
+
+  date: "July 2019 - March 2022",
+  purpose: "Personal Project",
+  roles: ["3D Animator", "Music Composer"],
+
+  description: "An animation of my original composition made during a 30-day Composition Challenge in 2019. \
+  The composition was inspired by Kensuke Ushio's minimalist work on A Silent Voice. \
+  The animation was heavily inspired by the 2000's Animusic animations by Wayne Lytle and Dave Crognale.",
+  image: Minimal,
+  skills: ["Blender", "Musescore"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4", "Watch Here!", true)],
+}
+
+const silliness : ProjectViewProps = {
+  name: "Silliness",
+  subtitle: "A quadrilateral visualization.",
+
+  date: "April 2022 - May 2022",
+  purpose: "LVA Music Tech: Semester Project",
+  roles: ["3D Animator", "Music Composer", "Video Editor"],
+
+  description: "A simple animation of an original composition made during my senior year at LVA. \
+  My goal for the composition was to make very modular tracks that are still coherent when layered together. \
+  It uses the same instrument, but the visualization is able to show you which musical ideas belong to which.",
+  image: Silliness,
+  skills: ["Blender", "Cakewalk", "DaVinci Resolve"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4", "Watch Here!", true)],
+}
+
 export const projects : ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
-  soupasaurus, kuddelmuddel, arecibo
+  soupasaurus, kuddelmuddel, arecibo,
+  epilogue, minimal, silliness
 ];
