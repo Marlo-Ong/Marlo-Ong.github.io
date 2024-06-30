@@ -2,6 +2,7 @@ export interface ImageLink {
     image: string,
     alttext: string,
     link: string,
+    cssClasses?: string[],
 }
 
 export interface SocialLinkProps extends ImageLink {

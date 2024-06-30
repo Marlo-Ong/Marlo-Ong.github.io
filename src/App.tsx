@@ -1,14 +1,15 @@
 import "./App.css"
 import classes from "./App.module.css"
+import socialLinkClassses from "./SocialLink/SocialLink.module.css";
 import { SocialLink } from "./SocialLink/SocialLink"
 import { Project } from "./ProjectView/ProjectView"
 import { SocialLinkProps, ProjectViewProps } from "./common/types";
 // import ImageCarousel from "./Carousel/Carousel";
 
-import GithubLogo from "./public/White/Github_white.png"
-import HTMLLogo from "./public/White/HTML5_white.png"
-import LinkedinLogo from "./public/White/LinkedIN_white.png"
-import GmailLogo from "./public/White/Gmail_white.png"
+import GithubLogo from "./public/Black/Github_black.png"
+import HTMLLogo from "./public/Black/HTML5_black.png"
+import LinkedinLogo from "./public/Black/LinkedIN_black.png"
+import GmailLogo from "./public/Black/Gmail_black.png"
 import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
 import WordHunt from "./public/wordhunt.jpg"
@@ -35,7 +36,7 @@ const gmail : SocialLinkProps = {
   link: "mailto:moon.ongkingco@outlook.com",
   alttext: "Gmail Logo",
   image: GmailLogo,
-  domain: "Email"
+  domain: "Email",
 }
 
 const socialMediaLinks : SocialLinkProps[] = [
@@ -56,14 +57,15 @@ function itchIO(link: string)
 {
   var itchioProps : SocialLinkProps = {
     link: "https://mkingco.itch.io/" + link,
+    cssClasses: [socialLinkClassses.actionButton],
     alttext: "HTML Logo",
     image: HTMLLogo,
-    domain: "itch.io"
+    domain: "Play Now!"
   }
   return <SocialLink {...itchioProps}/>
 }
 
-const project1 : ProjectViewProps = {
+const kuddelmuddel : ProjectViewProps = {
   name: "Kuddelmuddel",
   subtitle: "Grow weeds and take over the Earth!",
   
@@ -80,7 +82,7 @@ const project1 : ProjectViewProps = {
   socials: [Github("https://github.com/elenachau/techwise-kuddelmuddel"), itchIO("kuddelmuddel")],
 }
 
-const project2 : ProjectViewProps = {
+const arecibo : ProjectViewProps = {
   name: "Project Arecibo",
   subtitle: "Send messages to the future.",
 
@@ -98,7 +100,7 @@ const project2 : ProjectViewProps = {
   socials: [Github("https://github.com/ChrisTutje/TechwiseCommunicationsApp")],
 }
 
-const project3 : ProjectViewProps = {
+const wordhunt : ProjectViewProps = {
   name: "Word Hunt Recreated",
   subtitle: "The classic GamePigeon game, now on the Web.",
 
@@ -115,7 +117,7 @@ const project3 : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/word-hunt-recreated"), itchIO("gamepigeon-word-hunt")],
 }
 
-const project4 : ProjectViewProps = {
+const infinitrivia : ProjectViewProps = {
   name: "Infinitrivia",
   subtitle: "Limitless trivia powered by ChatGPT.",
 
@@ -133,7 +135,7 @@ const project4 : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/infinitrivia"), itchIO("infinitrivia")],
 }
 
-const project5 : ProjectViewProps = {
+const soupasaurus : ProjectViewProps = {
   name: "Soupasaurus",
   subtitle: "What kind of soup would you be?",
 
@@ -150,7 +152,7 @@ const project5 : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/soupasaurus"), itchIO("soupasaurus")],
 }
 
-const project6 : ProjectViewProps = {
+const sillybilly : ProjectViewProps = {
   name: "Silly Billies' Chromatic Chaos",
   subtitle: "Bureacracy for iPad kids!",
 
@@ -169,7 +171,8 @@ const project6 : ProjectViewProps = {
 }
 
 const projects : ProjectViewProps[] = [
-  project1, project2, project4, project5, project3, project6
+  infinitrivia, wordhunt, sillybilly,
+  soupasaurus, kuddelmuddel, arecibo
 ];
 
 function App() {

@@ -9,3 +9,7 @@ input {
   border: 2px solid gray;
   padding: 10px;
 }
+
+img {
+  max-width: 50px;
+}
