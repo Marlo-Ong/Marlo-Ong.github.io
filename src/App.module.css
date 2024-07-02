@@ -9,7 +9,8 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding: 20px
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .header {
@@ -32,9 +33,22 @@
 @media (min-width: 800px) {
     .projectsView {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(50%); /* Two columns */
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(33.33); /* Three columns */
+        flex: 1;
     }
 }
 
