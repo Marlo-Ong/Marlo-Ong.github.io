@@ -3,6 +3,7 @@ import YoutubeLogo from "./public/Black/Youtube_black.png"
 import LinkedinLogo from "./public/Black/LinkedIN_black.png"
 import GmailLogo from "./public/Black/Gmail_black.png"
 import HTMLLogo from "./public/Black/HTML5_black.png"
+import GoogleLogo from "./public/Black/Google_black.png"
 
 import { SocialLinkProps } from "./common/types";
 import { SocialLink } from "./SocialLink/SocialLink";
@@ -30,7 +31,7 @@ const gmail : SocialLinkProps = {
 }
 
 const youtube : SocialLinkProps = {
-  link: "https://www.youtube.com/channel/UCvuFxj0nn0lfNLO-Zrhlb0A",
+  link: "https://www.youtube.com/@kingcoism/videos",
   alttext: "YouTube logo",
   image: YoutubeLogo,
   domain: "Youtube"
@@ -62,7 +63,7 @@ export function itchIO(link: string)
   return <SocialLink {...itchioProps}/>
 }
 
-export function Youtube(link: string, title?: string, isActionButton?: boolean)
+export function Youtube(link: string, isActionButton: boolean = true, title?: string)
 {
   var youtubeProps : SocialLinkProps = {
     ...youtube,
@@ -74,4 +75,19 @@ export function Youtube(link: string, title?: string, isActionButton?: boolean)
     youtubeProps.cssClasses = [socialLinkClasses.actionButton]
 
   return <SocialLink {...youtubeProps}/>
+}
+
+export function Google(link: string, title: string, isActionButton: boolean = true)
+{
+  var customProps : SocialLinkProps = {
+    link: link,
+    alttext: "The Google logo.",
+    image: GoogleLogo,
+    domain: title,
+    }
+
+  if (isActionButton)
+    customProps.cssClasses = [socialLinkClasses.actionButton]
+
+  return <SocialLink {...customProps}/>
 }

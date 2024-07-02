@@ -1,5 +1,5 @@
 import { ProjectViewProps } from "./common/types";
-import { Github, Youtube, itchIO } from "./Socials";
+import { Github, Google, Youtube, itchIO } from "./Socials";
 
 import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
@@ -10,6 +10,9 @@ import SillyBilly from "./public/sillybilly.png"
 import Epilogue from "./public/epilogue.png"
 import Minimal from "./public/minimal.png"
 import Silliness from "./public/silliness.png"
+import Nonsensical from "./public/nonsensical.png"
+import ParisianDream from "./public/parisiandream.png"
+import FrutigerAero from "./public/frutiger.png"
 
 
 const kuddelmuddel : ProjectViewProps = {
@@ -28,7 +31,7 @@ const kuddelmuddel : ProjectViewProps = {
   
   socials: [
     Github("https://github.com/elenachau/techwise-kuddelmuddel"),
-    Youtube("https://www.youtube.com/watch?v=_nOwZ7wz6nY", "Trailer"),
+    Youtube("https://www.youtube.com/watch?v=_nOwZ7wz6nY", false, "Trailer"),
     itchIO("kuddelmuddel")
   ],
 }
@@ -65,7 +68,11 @@ const wordhunt : ProjectViewProps = {
   image: WordHunt,
   skills: ["Unity", "C#"],
 
-  socials: [Github("https://github.com/Marlo-Ong/word-hunt-recreated"), itchIO("gamepigeon-word-hunt")],
+  socials: [
+    Github("https://github.com/Marlo-Ong/word-hunt-recreated"),
+    Google("https://docs.google.com/document/d/1wPYATW8UgB-PooRN8VOaTBGCO1oJWUF2bV40hNSuLy0/edit?usp=sharing", "Guide", false),
+    itchIO("gamepigeon-word-hunt")
+  ],
 }
 
 const infinitrivia : ProjectViewProps = {
@@ -120,7 +127,7 @@ const sillybilly : ProjectViewProps = {
 
   socials: [
     Github("https://github.com/SapphireGaze/chromatic-chaos"),
-    Youtube("https://www.youtube.com/watch?v=KLmcro7wXwI", "Music"),
+    Youtube("https://www.youtube.com/watch?v=KLmcro7wXwI", false, "Music"),
     itchIO("silly-billiess-chromatic-chaos")],
 }
 
@@ -138,7 +145,7 @@ const epilogue : ProjectViewProps = {
   image: Epilogue,
   skills: ["Blender", "Cakewalk DAW", "Musescore", "DaVinci Resolve", "Recording/Mixing/Mastering"],
 
-  socials: [Youtube("https://www.youtube.com/watch?v=nCfQIgI1Hks", "Watch Here!", true)],
+  socials: [Youtube("https://www.youtube.com/watch?v=nCfQIgI1Hks")],
 }
 
 const minimal : ProjectViewProps = {
@@ -155,7 +162,7 @@ const minimal : ProjectViewProps = {
   image: Minimal,
   skills: ["Blender", "Musescore"],
 
-  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4", "Watch Here!", true)],
+  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
 }
 
 const silliness : ProjectViewProps = {
@@ -172,11 +179,67 @@ const silliness : ProjectViewProps = {
   image: Silliness,
   skills: ["Blender", "Cakewalk", "DaVinci Resolve"],
 
-  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4", "Watch Here!", true)],
+  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
+}
+
+const nonsensical : ProjectViewProps = {
+  name: "Nonsensical",
+  subtitle: "What does it mean?",
+
+  date: "March 2022",
+  purpose: "Personal Project",
+  roles: ["3D Animator", "Music Composer", "Video Editor", "Audio Engineer"],
+
+  description: "A video editing test made over one of my original compositions. \
+  This was my first time diving into DaVinci Resolve and discovering its capabilities. \
+  My goal for the video was to see if I could overlay green screen effects atop my 3D Blender animations. \
+  The song was inspired by Kamasi Washington's \"Harmony of Differences\" and creates a replayable loop.",
+  image: Nonsensical,
+  skills: ["Blender", "REAPER", "Musescore", "DaVinci Resolve", "Audio Mixing"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=J3nH6R0C1EE")],
+}
+
+const parisiandream : ProjectViewProps = {
+  name: "Parisian Dream",
+  subtitle: "A dreary poem.",
+
+  date: "September 2022",
+  purpose: "Personal Project",
+  roles: ["3D Animator", "Sound Designer"],
+
+  description: "My first short attempt at animating a human body. \
+  This video combined a lot of inspirations I had at the time:\
+  Shuzo Oshimi's \"Aku No Hana\" and its use of Charles Baudelaire's collection \
+  of poems \"Les Fleurs du Mal,\" vocal synthesis for non-musical purposes, and the eerieness of Boisvert's videos. ",
+  image: ParisianDream,
+  skills: ["Blender", "Synthesizer V Studio Basic", "Voice Synthesis", "DaVinci Resolve", "REAPER"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=qw3ZKqMqG_g")],
+}
+
+const frutigeraero : ProjectViewProps = {
+  name: "Frutiger Aero",
+  subtitle: "A 2000s-era aesthetic.",
+
+  date: "January 2023",
+  purpose: "Personal Project",
+  roles: ["3D Animator"],
+
+  description: " \
+  I sought to challenge myself with this animation: using only a reference photo, \
+  I wanted to bring to life the feeling of a nostalgic 2000's aesthetic. I was able to \
+  apply knowledge about rigging with animal skeletons, building complex shaders with the bubbles, and \
+  cloth physics from animating the waves and ripples of the computer screen.",
+  image: FrutigerAero,
+  skills: ["Blender 3D", "Rigging",],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=YPpdxCmrk_0")],
 }
 
 export const projects : ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, arecibo,
-  epilogue, minimal, silliness
+  epilogue, minimal, silliness,
+  nonsensical, parisiandream, frutigeraero
 ];

@@ -14,8 +14,7 @@
 }
 
 .header {
-    width: 50%;
-    flex-shrink: 1;
+    margin: 10px
 }
 
 .socialsView {
@@ -28,6 +27,7 @@
 .projectsView {
     display: block;
     background-color: rgb(17, 17, 17);
+    padding-bottom: 40px;
 }
 
 @media (min-width: 800px) {
@@ -50,10 +50,6 @@
         flex-basis: calc(33.33); /* Three columns */
         flex: 1;
     }
-}
-
-.appView > h1 {
-    font-size: 100px;
 }
 
 h2 {
