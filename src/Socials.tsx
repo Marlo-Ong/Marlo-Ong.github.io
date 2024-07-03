@@ -2,8 +2,8 @@ import GithubLogo from "./public/Black/Github_black.png"
 import YoutubeLogo from "./public/Black/Youtube_black.png"
 import LinkedinLogo from "./public/Black/LinkedIN_black.png"
 import GmailLogo from "./public/Black/Gmail_black.png"
-import HTMLLogo from "./public/Black/HTML5_black.png"
 import GoogleLogo from "./public/Black/Google_black.png"
+import ItchIOLogo from "./public/Black/itchio-logo.png"
 
 import { SocialLinkProps } from "./common/types";
 import { SocialLink } from "./SocialLink/SocialLink";
@@ -37,8 +37,15 @@ const youtube : SocialLinkProps = {
   domain: "Youtube"
 }
 
+const itchio : SocialLinkProps = {
+  link: "https://mkingco.itch.io/",
+  alttext: "Itch.IO Logo",
+  image: ItchIOLogo,
+  domain: "itch.io"
+}
+
 export const socialMediaLinks : SocialLinkProps[] = [
-  github, linkedin, youtube, gmail
+  github, linkedin, itchio, youtube, gmail,
 ];
 
 // Project Links
@@ -57,7 +64,7 @@ export function itchIO(link: string)
     link: "https://mkingco.itch.io/" + link,
     cssClasses: [socialLinkClasses.actionButton],
     alttext: "HTML Logo",
-    image: HTMLLogo,
+    image: ItchIOLogo,
     domain: "Play Now!"
   }
   return <SocialLink {...itchioProps}/>
