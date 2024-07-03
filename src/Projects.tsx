@@ -14,6 +14,8 @@ import Nonsensical from "./public/nonsensical.png"
 import ParisianDream from "./public/parisiandream.png"
 import FrutigerAero from "./public/frutiger.png"
 
+import InfinitriviaGIF from "./public/infinitrivia.gif"
+
 
 const kuddelmuddel : ProjectViewProps = {
   name: "Kuddelmuddel",
@@ -87,7 +89,10 @@ const infinitrivia : ProjectViewProps = {
   Inspired by games such as JackBox Party Pack and the Impossible Quiz, I went for a cohesive but playful design. I made all the visual assets, \
   including a custom hand-drawn font, logo, and buttons. I tested several OpenAI prompts to retrieve consistent trivia questions and answers.\
   I used MockAPI to read and store created questions to save tokens.",
-  image: Infinitrivia,
+  image: {
+    staticImg: Infinitrivia,
+    gif: InfinitriviaGIF
+  },
   skills: ["Unity", "C#", "REST APIs", "OpenAI API", "Visual Design", "Databasing", "Prompt Engineering"],
 
   socials: [Github("https://github.com/Marlo-Ong/infinitrivia"), itchIO("infinitrivia")],

@@ -17,7 +17,7 @@ export interface ProjectViewProps {
     purpose: string,
     roles?: string[],
 
-    image?: string,
+    image?: string | HoverGifProps,
     description: string,
     skills: string[],
 
@@ -29,4 +29,9 @@ export interface ProjectSectionProps {
     title: string,
     description: string,
     projects: ProjectViewProps[]
+}
+
+export interface HoverGifProps {
+    staticImg : string,
+    gif : string
 }

@@ -1,7 +1,16 @@
 import { FC } from "react";
-import { ProjectViewProps } from "../common/types";
-// import { SocialLink } from "../SocialLink/SocialLink";
+import { ProjectViewProps, HoverGifProps } from "../common/types";
 import classes from "./ProjectView.module.css"
+import HoverGif from "../HoverGif";
+
+function isHoverGifProps(obj: any): obj is HoverGifProps {
+    return (
+        typeof obj === 'object' &&
+        obj !== null &&
+        typeof obj.staticImg === 'string' &&
+        typeof obj.gif === 'string'
+    );
+};
 
 export const Project: FC<ProjectViewProps> = ({ image, description, name, skills, subtitle, date, purpose, roles, socials }: ProjectViewProps) => {
     return (
@@ -16,7 +25,11 @@ export const Project: FC<ProjectViewProps> = ({ image, description, name, skills
             </div>
 
             <div className={classes.imgContainer}>
-                <img className={classes.projectImg} src={image}/>
+                {isHoverGifProps(image) ? (
+                    <HoverGif {...image} />
+                ) : (
+                    <img className={classes.projectImg} src={image as string} alt="Project" />
+                )}
             </div>
 
             <div className={classes.projectContent}>
