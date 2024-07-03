@@ -24,3 +24,9 @@ export interface ProjectViewProps {
     socials?: JSX.Element[],
     game?: JSX.Element,
 }
+
+export interface ProjectSectionProps {
+    title: string,
+    description: string,
+    projects: ProjectViewProps[]
+}

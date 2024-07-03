@@ -237,9 +237,12 @@ const frutigeraero : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=YPpdxCmrk_0")],
 }
 
-export const projects : ProjectViewProps[] = [
+export const games : ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, arecibo,
+];
+
+export const videos : ProjectViewProps[] = [
   epilogue, minimal, silliness,
   nonsensical, parisiandream, frutigeraero
-];
+]

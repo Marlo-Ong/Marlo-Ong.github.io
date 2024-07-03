@@ -1,0 +1,50 @@
+:root {
+    --section-bg-color: rgb(17, 17, 17);
+    --banner-bg-color: #242424;
+}
+
+.projectsView {
+    display: block;
+    padding-bottom: 40px;
+}
+
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    background-color: var(--banner-bg-color);
+    text-align: center;
+}
+
+.sectionText p {
+    width: 50%;
+}
+
+.projectSection {
+    background-color: var(--section-bg-color);
+}
+
+@media (min-width: 800px) {
+    .projectsView {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(50%); /* Two columns */
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(33.33); /* Three columns */
+        flex: 1;
+    }
+}
