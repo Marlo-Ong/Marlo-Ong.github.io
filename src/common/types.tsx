@@ -12,6 +12,7 @@ export interface SocialLinkProps extends ImageLink {
 export interface ProjectViewProps {
     name: string,
     subtitle: string,
+    favorite?: boolean;
 
     date: string,
     purpose: string,

@@ -1,7 +1,8 @@
 import { FC } from "react";
 import { ProjectViewProps, HoverGifProps } from "../common/types";
 import classes from "./ProjectView.module.css"
-import HoverGif from "../HoverGif";
+import HoverGif from "../Utils/HoverGif";
+import StarIcon from "../public/star-icon.png";
 
 function isHoverGifProps(obj: any): obj is HoverGifProps {
     return (
@@ -12,9 +13,15 @@ function isHoverGifProps(obj: any): obj is HoverGifProps {
     );
 };
 
-export const Project: FC<ProjectViewProps> = ({ image, description, name, skills, subtitle, date, purpose, roles, socials }: ProjectViewProps) => {
+export const Project: FC<ProjectViewProps> = ({ image, description, name, skills, subtitle, date, purpose, roles, socials, favorite }: ProjectViewProps) => {
     return (
         <div className={classes.project}>
+            {favorite &&
+                <div className={classes.favorite}>
+                    <img src={StarIcon}/>
+                    <span>Personal Favorite</span>
+                </div>
+            }
             <h1>{name}</h1>
             <h2>{subtitle}</h2>
 

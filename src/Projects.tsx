@@ -96,6 +96,7 @@ const wordhunt : ProjectViewProps = {
 const infinitrivia : ProjectViewProps = {
   name: "Infinitrivia",
   subtitle: "Limitless trivia powered by ChatGPT.",
+  favorite: true,
 
   date: "April 2024",
   purpose: "\"Biggest Little Hackathon 2024\" Entry",
@@ -117,6 +118,7 @@ const infinitrivia : ProjectViewProps = {
 const soupasaurus : ProjectViewProps = {
   name: "Soupasaurus",
   subtitle: "What kind of soup would you be?",
+  favorite: true,
 
   date: "April 2024",
   purpose: "\"LA Hacks 2024\" Entry",
@@ -132,7 +134,7 @@ const soupasaurus : ProjectViewProps = {
 }
 
 const sillybilly : ProjectViewProps = {
-  name: "Silly Billies' Chromatic Chaos",
+  name: "Silly Billies's Chromatic Chaos",
   subtitle: "Bureacracy for iPad kids!",
 
   date: "April 2023",
@@ -158,6 +160,7 @@ const sillybilly : ProjectViewProps = {
 const epilogue : ProjectViewProps = {
   name: "Epilogue",
   subtitle: "A journey of a sphere in space.",
+  favorite: true,
 
   date: "January 2021 - April 2021",
   purpose: "LVA Jazz Class: Semester 2 Video Project",
@@ -209,6 +212,7 @@ const silliness : ProjectViewProps = {
 const nonsensical : ProjectViewProps = {
   name: "Nonsensical",
   subtitle: "What does it mean?",
+  favorite: true,
 
   date: "March 2022",
   purpose: "Personal Project",
@@ -245,6 +249,7 @@ const parisiandream : ProjectViewProps = {
 const frutigeraero : ProjectViewProps = {
   name: "Frutiger Aero",
   subtitle: "A 2000s-era aesthetic.",
+  favorite: true,
 
   date: "January 2023",
   purpose: "Personal Project",

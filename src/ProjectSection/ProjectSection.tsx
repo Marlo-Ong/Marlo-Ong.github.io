@@ -12,15 +12,21 @@ const distributeIntoColumns = <T, >(items: T[], numOfColumns: number): T[][] => 
     return columns;
   }
   
-  // Fisher-Yates
-  const shuffleArray = (array: any[]) => {
-    let shuffledArray = array.slice(); // Create a copy of the array
-    for (let i = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-    }
-    return shuffledArray;
-  };
+// Fisher-Yates
+const shuffleArray = (array: any[]) => {
+  let shuffledArray = array.slice(); // Create a copy of the array
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
+const shuffleProjects = (array: any[]) => {
+  let favorites = array.filter(x => x.favorite);
+  let nonFavorites = array.filter(x => !x.favorite);
+  return (shuffleArray(favorites).concat(shuffleArray(nonFavorites)));
+};
 
 export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, description, projects }: ProjectSectionProps) => {
   const [numOfColumns, setNumOfColumns] = useState(1);
@@ -48,7 +54,7 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
     };
   }, []);
 
-  const columns = distributeIntoColumns(shuffleArray(projects), numOfColumns);
+  const columns = distributeIntoColumns(shuffleProjects(projects), numOfColumns);
 
   return (
     <div className={classes.projectSection}>
@@ -78,7 +84,7 @@ const gamesProjectSection : ProjectSectionProps = {
 }
 
 const videosProjectSection : ProjectSectionProps = {
-  title: "Videos",
+  title: "3D Animations",
   description: "My 3D animations and video editing projects \
   dating as far back as 2021. All of these videos utilize Blender 3D \
   and are typically backed by even older musical compositions I wrote.",

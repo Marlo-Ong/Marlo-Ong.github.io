@@ -1,4 +1,5 @@
 .project {
+    position: relative;
     background-color: #242424;
     border: 2px solid gray;
     border-radius: 10px;
@@ -16,6 +17,10 @@
 
 h1, h2{
     margin: 10px 0px 0px 0px;
+}
+
+.project h1 {
+    font-size: 35px;
 }
 
 h2 {
@@ -47,11 +52,12 @@ p > span {
     margin: 10px;
 }
 
-/* Bottom banner */
+/* Hover banner */
 .imgContainer span {
     min-width: 80%;
+    font-size: 0px;
     padding: 5px;
-    font-size: medium;
+    font-size: smaller;
     font-style: italic;
     color: gray;
     margin: 0;
@@ -72,10 +78,35 @@ p > span {
     border: 3px solid white;
 }
 
-.tagItem{
+.tagItem {
     background-color: rgb(74, 74, 74);
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 20px;
+}
+
+.favorite {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    background-color: rgb(255, 255, 0);
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 5px;
+}
+
+.favorite span {
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.favorite img {
+    fill: white;
+    width: 18px;
 }
