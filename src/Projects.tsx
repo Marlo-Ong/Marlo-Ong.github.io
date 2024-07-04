@@ -15,6 +15,10 @@ import ParisianDream from "./public/parisiandream.png"
 import FrutigerAero from "./public/frutiger.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
+import SillyBillyGIF from "./public/sillybilly.gif"
+import WordHuntGIF from "./public/wordhunt.gif"
+import AreciboGIF from "./public/arecibo.gif"
+import KuddelmuddelGIF from "./public/kuddelmuddel.gif"
 
 
 const kuddelmuddel : ProjectViewProps = {
@@ -28,7 +32,10 @@ const kuddelmuddel : ProjectViewProps = {
   description: "Kuddelmuddel is an incremental mobile game where you grow weeds, grow some more weeds, and grow even more weeds! \
   Created as a part of Techwise's Course 1 capstone project, I had a hand in coding the foundational game state logic, creating C# \
   developer tools for my fellow teammates, making the frame-by-frame animations, and implementing (and choosing) all of the music and SFX you hear in the game.",
-  image: Kuddelmuddel,
+  image: {
+    staticImg: Kuddelmuddel,
+    gif: KuddelmuddelGIF
+  },
   skills: ["Unity", "C#", "Data Structures", "UI/UX"],
   
   socials: [
@@ -50,10 +57,16 @@ const arecibo : ProjectViewProps = {
   from our MongoDB database, as well as create corresponding login and registration pages. I then converted our website from base \
   HTML to the .ejs template, to allow our home page to dynamically display user data. I also played an assistive role both by \
   debugging the back-end logic and by cleaning up front-end issues. ",
-  image: Arecibo,
+  image: {
+    staticImg: Arecibo,
+    gif: AreciboGIF
+  },
   skills: ["HTML/CSS", "AWS", "MongoDB", "Express.js", "JavaScript", "Github Issues"],
 
-  socials: [Github("https://github.com/ChrisTutje/TechwiseCommunicationsApp")],
+  socials: [
+    Github("https://github.com/ChrisTutje/TechwiseCommunicationsApp"),
+    Youtube("https://www.youtube.com/watch?v=0RG7q72lEh4", true, "Demo")
+  ],
 }
 
 const wordhunt : ProjectViewProps = {
@@ -67,7 +80,10 @@ const wordhunt : ProjectViewProps = {
   description: "A 2-day recreation of the iPhone game in Unity. I wanted to recreate the game exactly, so I utilized the game's \
   own assets, sounds, and dictionaries to make it as indistinguishable as possible. Future plans to expand the project are to \
   add custom board creation, shareable board links, match history, timed runs/speedruns, a high score leaderboard, and potentially online multiplayer.",
-  image: WordHunt,
+  image: {
+    staticImg: WordHunt,
+    gif: WordHuntGIF
+  },
   skills: ["Unity", "C#"],
 
   socials: [
@@ -127,7 +143,10 @@ const sillybilly : ProjectViewProps = {
   it was a steep learning experience jumping into C# and the Unity API for the first time, especially on a time crunch,\
   but it was also my first introduction to design patterns like using singletons and factories and coroutines. \
   Despite the challenges, we were able to pull off a game with awesome art, custom-made sounds, and a hilarious premise.",
-  image: SillyBilly,
+  image: {
+    gif: SillyBillyGIF,
+    staticImg: SillyBilly
+  },
   skills: ["Unity", "C#", "Design Patterns", "Music Composition", "Sound Design", "Teamwork"],
 
   socials: [

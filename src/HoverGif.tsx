@@ -6,13 +6,13 @@ export const HoverGif : FC<HoverGifProps> = ({ staticImg, gif }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div
+    <div className={classes.hoverGif}
       onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
+      onMouseLeave={() => setIsHovering(false)}>
+        
+      <span>(Click or hover to see a preview.)</span>
       <img className={classes.projectImg}
-        src={isHovering ? gif : staticImg}
-      />
+        src={isHovering ? gif : staticImg}/>
     </div>
   );
 };
