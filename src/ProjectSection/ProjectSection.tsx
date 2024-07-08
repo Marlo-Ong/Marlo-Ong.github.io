@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Project } from "../ProjectView/ProjectView";
-import { games, videos } from "../Projects";
+import { games, professional, videos } from "../Projects";
 import { ProjectSectionProps } from "../common/types";
 import classes from "./ProjectSection.module.css"
 import { RibbonBanner } from "../Utils/RibbonBanner";
@@ -78,7 +78,7 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
 }
   
 const gamesProjectSection : ProjectSectionProps = {
-  title: "Games",
+  title: "Self-Made Games",
   // description: "A collection of short games I've made. \
   // Most of them utilize the Unity game engine. All of them are \
   // built on the WebGL platform, meaning any device that runs HTML5 \
@@ -94,6 +94,11 @@ const videosProjectSection : ProjectSectionProps = {
   projects: videos
 }
 
+const professionalProjectSection : ProjectSectionProps = {
+  title: "Professional Work",
+  projects: professional
+}
+
 export const projectSections : ProjectSectionProps[] = [
-  gamesProjectSection, videosProjectSection
+  professionalProjectSection, gamesProjectSection, videosProjectSection
 ]

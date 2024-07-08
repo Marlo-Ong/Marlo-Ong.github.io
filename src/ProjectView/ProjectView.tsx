@@ -35,12 +35,17 @@ export const Project: FC<ProjectViewProps> = ({ image, description, name, skills
                 {isHoverGifProps(image) ? (
                     <HoverGif {...image} />
                 ) : (
-                    <img className={classes.projectImg} src={image as string} alt="Project" />
+                    image !== undefined && <img className={classes.projectImg} src={image as string} alt="Project" />
                 )}
             </div>
 
             <div className={classes.projectContent}>
-                <div>{description}</div>
+                <div>
+                    {Array.isArray(description)
+                    ? description.map(
+                        (item) => <li>{item}</li>)
+                    : description}
+                </div>
 
                 <div className={classes.skills}>
                     Skills used: {skills.map(

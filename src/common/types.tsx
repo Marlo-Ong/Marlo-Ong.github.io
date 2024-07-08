@@ -19,7 +19,7 @@ export interface ProjectViewProps {
     roles?: string[],
 
     image?: string | HoverGifProps,
-    description: string,
+    description: string | string[],
     skills: string[],
 
     socials?: JSX.Element[],

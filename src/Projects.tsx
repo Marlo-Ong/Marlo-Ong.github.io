@@ -13,6 +13,7 @@ import Silliness from "./public/silliness.png"
 import Nonsensical from "./public/nonsensical.png"
 import ParisianDream from "./public/parisiandream.png"
 import FrutigerAero from "./public/frutiger.png"
+import BirdGame from "./public/birdgame.jpg"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -20,7 +21,7 @@ import WordHuntGIF from "./public/wordhunt.gif"
 import AreciboGIF from "./public/arecibo.gif"
 import KuddelmuddelGIF from "./public/kuddelmuddel.gif"
 
-
+// Games
 const kuddelmuddel : ProjectViewProps = {
   name: "Kuddelmuddel",
   subtitle: "Grow weeds and take over the Earth!",
@@ -157,6 +158,7 @@ const sillybilly : ProjectViewProps = {
     itchIO("silly-billiess-chromatic-chaos")],
 }
 
+// 3D Animations
 const epilogue : ProjectViewProps = {
   name: "Epilogue",
   subtitle: "A journey of a sphere in space.",
@@ -265,6 +267,62 @@ const frutigeraero : ProjectViewProps = {
 
   socials: [Youtube("https://www.youtube.com/watch?v=YPpdxCmrk_0")],
 }
+
+// Professional Projects
+const birdgame : ProjectViewProps = {
+  name: "Unreleased ManaWorks Game",
+  subtitle: "Live life as a bird in this upcoming MMO.",
+
+  date: "May 2024 - August 2024",
+  purpose: "ManaWorks Inc. - Summer 2024 Internship",
+  roles: ["Game Programmer Intern", "Audio Engineer", "Performance Analyst"],
+
+  description: [
+    "Created an interface to monitor and display FPS, memory, in-game stats, and profiling stats within several different UI systems.",
+    "Analyzed and fixed performance bottlenecks/regressions in CPU/GPU.",
+    "Developed an semi-automated process for weekly benchmarking of game performance"
+  ],
+  image: BirdGame,
+  skills: ["UI/UX", "Game Optimization", "Performance Profiling", "Memory Management", "Data Structures and Algorithms"],
+
+  socials: [Google("https://mana.works/", "Dev Page", true)],
+}
+
+const liondragon : ProjectViewProps = {
+  name: "LionDragon Studios Game",
+  subtitle: "A language-learning mobile game for kids.",
+
+  date: "January 2024 - May 2024",
+  purpose: "LionDragon Studios - Spring 2024 Internship",
+  roles: ["Software Developer Intern"],
+
+  description: [
+    "Aided in building ground-up game logic and touch detection",
+    "Created tools for designers to add interactive animations to objects",
+    "Implemented reactive audio feedback for player input"
+  ],
+  skills: ["UI/UX", "Game Programming", "Mobile Development"],
+}
+
+const mobalytics : ProjectViewProps = {
+  name: "Mobalytics Synthesis Presentation",
+  subtitle: "\"Card Games Are Solved Games\"",
+
+  date: "November 2024 - December 2024",
+  purpose: "Mobalytics - Winter 2023 Externship",
+  roles: ["Game Market Researcher"],
+
+  description: "This was a synthesis of my Game Market Research & Analytics \
+  extenship at Mobalytics. The goal of the presentation was to conduct a high-level \
+  overview of the digital card games (DCG) genre from the perspective of an eSports-based \
+  companion helper application.",
+  skills: ["Loom", "Tableau", "SQL", "Market Research", "Player Psychology", "Game Analytics"],
+  socials: [Youtube("https://www.loom.com/share/86a53a8509b34e1f8965055e823dae6b", true)]
+}
+
+export const professional : ProjectViewProps[] = [
+  birdgame, liondragon, mobalytics
+];
 
 export const games : ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,

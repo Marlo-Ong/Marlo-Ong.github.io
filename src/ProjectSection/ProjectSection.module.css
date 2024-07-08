@@ -9,6 +9,7 @@
 }
 
 .projectSection {
+    width: 100%;
     background-color: var(--section-bg-color);
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@
 
 @media (min-width: 800px) {
     .projectsView {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
