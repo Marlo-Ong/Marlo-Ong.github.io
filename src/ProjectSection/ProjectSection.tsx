@@ -3,6 +3,7 @@ import { Project } from "../ProjectView/ProjectView";
 import { games, videos } from "../Projects";
 import { ProjectSectionProps } from "../common/types";
 import classes from "./ProjectSection.module.css"
+import { RibbonBanner } from "../Utils/RibbonBanner";
 
 const distributeIntoColumns = <T, >(items: T[], numOfColumns: number): T[][] => {
     const columns: T[][] = Array.from({ length: numOfColumns }, () => []);
@@ -58,10 +59,12 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
 
   return (
     <div className={classes.projectSection}>
-      <div className={classes.sectionText}>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </div>
+      <RibbonBanner {...
+        {
+          title: title,
+          text: description
+        }
+      }/>
 
       <div className={classes.projectsView}>
         {columns.map((column, columnIndex) => (
@@ -76,18 +79,18 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
   
 const gamesProjectSection : ProjectSectionProps = {
   title: "Games",
-  description: "A collection of short games I've made. \
-  Most of them utilize the Unity game engine. All of them are \
-  built on the WebGL platform, meaning any device that runs HTML5 \
-  can run these games! Try them on your phone!",
+  // description: "A collection of short games I've made. \
+  // Most of them utilize the Unity game engine. All of them are \
+  // built on the WebGL platform, meaning any device that runs HTML5 \
+  // can run these games! Try them on your phone!",
   projects: games
 }
 
 const videosProjectSection : ProjectSectionProps = {
   title: "3D Animations",
-  description: "My 3D animations and video editing projects \
-  dating as far back as 2021. All of these videos utilize Blender 3D \
-  and are typically backed by even older musical compositions I wrote.",
+  // description: "My 3D animations and video editing projects \
+  // dating as far back as 2021. All of these videos utilize Blender 3D \
+  // and are typically backed by even older musical compositions I wrote.",
   projects: videos
 }
 

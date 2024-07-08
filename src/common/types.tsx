@@ -28,7 +28,7 @@ export interface ProjectViewProps {
 
 export interface ProjectSectionProps {
     title: string,
-    description: string,
+    description?: string,
     projects: ProjectViewProps[]
 }
 
