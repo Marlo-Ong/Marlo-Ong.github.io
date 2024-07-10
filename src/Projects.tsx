@@ -312,10 +312,11 @@ const mobalytics : ProjectViewProps = {
   purpose: "Mobalytics - Winter 2023 Externship",
   roles: ["Game Market Researcher"],
 
-  description: "This was a synthesis of my Game Market Research & Analytics \
-  extenship at Mobalytics. The goal of the presentation was to conduct a high-level \
-  overview of the digital card games (DCG) genre from the perspective of an eSports-based \
-  companion helper application.",
+  description: "The goal of this presentation was to conduct a high-level \
+  overview of a video game genre to determine expansion viability for Mobalytics \
+  (and eSports-focused companion app). I chose to research the digital card games (DCG) genre due \
+  to my experience playing and watching on these types of games, as well as its \
+  popular strategic and competitive basis.",
   skills: ["Loom", "Tableau", "SQL", "Market Research", "Player Psychology", "Game Analytics"],
   socials: [Youtube("https://www.loom.com/share/86a53a8509b34e1f8965055e823dae6b", true)]
 }

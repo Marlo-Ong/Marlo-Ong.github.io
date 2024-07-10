@@ -25,14 +25,11 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px 20px;
 }
 
-.ribbon h1 {
+.ribbonContent {
+    font-size: clamp(8px, calc(2vw), 15px);
     white-space: nowrap;
-    text-overflow: ellipsis;
-}
+    overflow: hidden;
 
-.ribbon span {
-    white-space: wrap;
-    text-overflow: wrap;
 }
   
 .ribbon:before, .ribbon:after {
