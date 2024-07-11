@@ -20,6 +20,12 @@ import SillyBillyGIF from "./public/sillybilly.gif"
 import WordHuntGIF from "./public/wordhunt.gif"
 import AreciboGIF from "./public/arecibo.gif"
 import KuddelmuddelGIF from "./public/kuddelmuddel.gif"
+// import EpilogueGIF from "./public/epilogue.gif"
+import FrutigerGIF from "./public/frutiger.gif"
+import MinimalGIF from "./public/minimal.gif"
+import NonsensicalGIF from "./public/nonsensical.gif"
+import ParisianDremaGIF from "./public/parisiandream.gif"
+import SillinessGIF from "./public/silliness.gif"
 
 // Games
 const kuddelmuddel : ProjectViewProps = {
@@ -131,7 +137,11 @@ const soupasaurus : ProjectViewProps = {
   image: Soupasaurus,
   skills: ["Unity", "C#", "Python", "Google Gemini API"],
 
-  socials: [Github("https://github.com/Marlo-Ong/soupasaurus"), itchIO("soupasaurus")],
+  socials: [
+    Github("https://github.com/Marlo-Ong/soupasaurus"),
+    Google("https://devpost.com/software/soupersaurus", "Devpost", false),
+    Youtube("https://youtu.be/3SGgthFEBKs", false, "Demo"),
+    itchIO("soupasaurus")],
 }
 
 const sillybilly : ProjectViewProps = {
@@ -188,7 +198,10 @@ const minimal : ProjectViewProps = {
   description: "An animation of my original composition made during a 30-day Composition Challenge in 2019. \
   The composition was inspired by Kensuke Ushio's minimalist work on A Silent Voice. \
   The animation was heavily inspired by the 2000's Animusic animations by Wayne Lytle and Dave Crognale.",
-  image: Minimal,
+  image: {
+    staticImg: Minimal,
+    gif: MinimalGIF
+  },
   skills: ["Blender", "Musescore"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
@@ -205,7 +218,10 @@ const silliness : ProjectViewProps = {
   description: "A simple animation of an original composition made during my senior year at LVA. \
   My goal for the composition was to make very modular tracks that are still coherent when layered together. \
   It uses the same instrument, but the visualization is able to show you which musical ideas belong to which.",
-  image: Silliness,
+  image: {
+    staticImg: Silliness,
+    gif: SillinessGIF
+  },
   skills: ["Blender", "Cakewalk", "DaVinci Resolve"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
@@ -224,7 +240,10 @@ const nonsensical : ProjectViewProps = {
   This was my first time diving into DaVinci Resolve and discovering its capabilities. \
   My goal for the video was to see if I could overlay green screen effects atop my 3D Blender animations. \
   The song was inspired by Kamasi Washington's \"Harmony of Differences\" and creates a replayable loop.",
-  image: Nonsensical,
+  image: {
+    staticImg: Nonsensical,
+    gif: NonsensicalGIF
+  },
   skills: ["Blender", "REAPER", "Musescore", "DaVinci Resolve", "Audio Mixing"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=J3nH6R0C1EE")],
@@ -242,7 +261,10 @@ const parisiandream : ProjectViewProps = {
   This video combined a lot of inspirations I had at the time:\
   Shuzo Oshimi's \"Aku No Hana\" and its use of Charles Baudelaire's collection \
   of poems \"Les Fleurs du Mal,\" vocal synthesis for non-musical purposes, and the eerieness of Boisvert's videos. ",
-  image: ParisianDream,
+  image: {
+    staticImg: ParisianDream,
+    gif: ParisianDremaGIF
+  },
   skills: ["Blender", "Synthesizer V Studio Basic", "Voice Synthesis", "DaVinci Resolve", "REAPER"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=qw3ZKqMqG_g")],
@@ -262,7 +284,10 @@ const frutigeraero : ProjectViewProps = {
   I wanted to bring to life the feeling of a nostalgic 2000's aesthetic. I was able to \
   apply knowledge about rigging with animal skeletons, building complex shaders with the bubbles, and \
   cloth physics from animating the waves and ripples of the computer screen.",
-  image: FrutigerAero,
+  image: {
+    staticImg: FrutigerAero,
+    gif: FrutigerGIF
+  },
   skills: ["Blender 3D", "Rigging",],
 
   socials: [Youtube("https://www.youtube.com/watch?v=YPpdxCmrk_0")],
