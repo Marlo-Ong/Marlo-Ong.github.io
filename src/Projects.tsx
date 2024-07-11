@@ -224,7 +224,7 @@ const silliness : ProjectViewProps = {
   },
   skills: ["Blender", "Cakewalk", "DaVinci Resolve"],
 
-  socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
+  socials: [Youtube("https://youtu.be/wbcT1ex_PB8?si=e_rFKh5GoXzobQNe")],
 }
 
 const nonsensical : ProjectViewProps = {
