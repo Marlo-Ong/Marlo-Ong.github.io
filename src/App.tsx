@@ -20,7 +20,9 @@ function App() {
         </div>
       </div>
       
-      {projectSections.map((args) => (<ProjectSection {...args}/> ))}
+      <div className={classes.body}>
+        {projectSections.map((args) => (<ProjectSection {...args}/> ))}
+      </div>
 
     </div>
   );

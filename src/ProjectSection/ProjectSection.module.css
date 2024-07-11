@@ -10,7 +10,6 @@
 
 .projectSection {
     width: 100%;
-    background-color: var(--section-bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;

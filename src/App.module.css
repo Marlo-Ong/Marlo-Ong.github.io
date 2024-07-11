@@ -23,6 +23,10 @@
     font-size: 50px;
 }
 
+.body {
+    background-color: var(--section-bg-color);
+}
+
 .socialsView {
     display: flex;
     flex-direction: row;

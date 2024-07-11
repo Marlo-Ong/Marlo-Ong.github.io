@@ -78,7 +78,7 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
 }
   
 const gamesProjectSection : ProjectSectionProps = {
-  title: "Self-Made Games",
+  title: "Video Games",
   // description: "A collection of short games I've made. \
   // Most of them utilize the Unity game engine. All of them are \
   // built on the WebGL platform, meaning any device that runs HTML5 \
