@@ -1,0 +1,41 @@
+.arrow {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px
+}
+
+.arrow span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    margin: -2px;
+    animation: pushdownfade 2s infinite;
+    transform: rotate(45deg);
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(1) {
+    animation-delay: -0.4s;
+}
+
+@keyframes pushdownfade {
+    0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -10px);
+    }
+
+    50% {
+    opacity: 1;
+    }
+
+    100% {
+    opacity: 0;
+    }
+}

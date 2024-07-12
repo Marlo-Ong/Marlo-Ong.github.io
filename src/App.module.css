@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.introScreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -11,11 +17,11 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color: var(--banner-bg-color);
 }
 
 .header {
     margin: 10px;
-    
 }
 
 .header h1 {
@@ -23,8 +29,44 @@
     font-size: 50px;
 }
 
-.body {
-    background-color: var(--section-bg-color);
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 50px 0 50px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+@media (max-width: 799px) {
+    .aboutMe {
+        flex-direction: column;
+    }
+}
+
+.aboutMeTexts {
+    flex-basis: 40%;
+    font-size: clamp(12px, 1.4vw, 20px);
+}
+
+.aboutMeImage {
+    flex-basis: 60%;
+    padding: 20px;
+}
+
+.aboutMeImage img {
+    max-width: 100%;
+}
+
+.scrollToAction {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    margin: 20px;
+}
+
+.scrollToAction h1 {
+    font-size: larger;
 }
 
 .socialsView {
