@@ -14,6 +14,7 @@ import Nonsensical from "./public/nonsensical.png"
 import ParisianDream from "./public/parisiandream.png"
 import FrutigerAero from "./public/frutiger.png"
 import BirdGame from "./public/birdgame.jpg"
+import CS381GIF from "./public/cs381.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -346,16 +347,66 @@ const mobalytics : ProjectViewProps = {
   socials: [Youtube("https://www.loom.com/share/86a53a8509b34e1f8965055e823dae6b", true)]
 }
 
+// Class Projects
+const cs381 : ProjectViewProps = {
+  name: "The CS381 Collection",
+  subtitle: "Ships and planes!",
+
+  date: "January 2024 - May 2024",
+  purpose: "CS3381 (Game Engine Architectures) Weekly Projects",
+  roles: ["Game Programmer", "Audio Engineer"],
+
+  description: "A repository of 12 demoable assignments that demonstrate an understanding of \
+  various game engine aspects: kinematics and game architectures (OOEC/ECS) with moving ships \
+  and planes; UI and sound systems with Raylib; and networking models with Godot.",
+  image: CS381GIF,
+  skills: ["C++", "Raylib", "Godot", "ECS", "Object-Oriented Systems", "Quality Assurance", "Multiplayer Networking"],
+  socials: [Github("https://github.com/Marlo-Ong/cs381-game-architecture.git")]
+}
+
+// Software
+const portfolio : ProjectViewProps = {
+  name: "Portfolio Website",
+  subtitle: "You're looking at it!",
+
+  date: "May 2024 - July 2024",
+  purpose: "TechWise Course 3 Lab",
+  roles: ["Front-End Developer"],
+
+  description: "",
+  skills: ["React", "HTML/CSS", "TypeScript", "Github Pages", "Node.js", "Vite"],
+  socials: [Github("https://github.com/Marlo-Ong/Marlo-Ong.github.io")]
+}
+
+const slideshowmaker : ProjectViewProps = {
+  name: "Procedual Slideshow Maker",
+  subtitle: "3D slideshow at your fingertips!",
+
+  date: "August 2023",
+  purpose: "Personal Project",
+  roles: ["Solo Developer", "3D Animator"],
+
+  description: "Forked from a automatic Google Photos downloader repository. \
+  Utilizes Blender 3D to take any batch of photos and creates a timed slideshow \
+  animation.",
+  skills: ["Blender 3D", "Python", "pandas", "Google Photos API",],
+  socials: [Github("https://github.com/Marlo-Ong/google-blender-slideshow-maker")]
+}
+
 export const professional : ProjectViewProps[] = [
   birdgame, liondragon, mobalytics
 ];
 
 export const games : ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
-  soupasaurus, kuddelmuddel, arecibo,
+  soupasaurus, kuddelmuddel, cs381,
 ];
 
 export const videos : ProjectViewProps[] = [
   epilogue, minimal, silliness,
   nonsensical, parisiandream, frutigeraero
+]
+
+export const software : ProjectViewProps[] = [
+  arecibo, portfolio, slideshowmaker
 ]

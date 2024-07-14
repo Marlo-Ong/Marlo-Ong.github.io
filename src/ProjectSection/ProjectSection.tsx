@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Project } from "../ProjectView/ProjectView";
-import { games, professional, videos } from "../Projects";
+import { games, professional, software, videos } from "../Projects";
 import { ProjectSectionProps } from "../common/types";
 import classes from "./ProjectSection.module.css"
 import { RibbonBanner } from "../Utils/RibbonBanner";
@@ -99,6 +99,11 @@ const professionalProjectSection : ProjectSectionProps = {
   projects: professional
 }
 
+const softwareProjectSection : ProjectSectionProps = {
+  title: "Software",
+  projects: software
+}
+
 export const projectSections : ProjectSectionProps[] = [
-  professionalProjectSection, gamesProjectSection, videosProjectSection
+  professionalProjectSection, gamesProjectSection, softwareProjectSection, videosProjectSection,
 ]
