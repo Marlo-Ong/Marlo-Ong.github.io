@@ -15,6 +15,7 @@ import ParisianDream from "./public/parisiandream.png"
 import FrutigerAero from "./public/frutiger.png"
 import BirdGame from "./public/birdgame.jpg"
 import CS381GIF from "./public/cs381.png"
+import Yeast from "./public/Yeast Poster 2023.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -393,8 +394,24 @@ const slideshowmaker : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/google-blender-slideshow-maker")]
 }
 
+const research : ProjectViewProps = {
+  name: "Undergraudate Research Poster",
+  subtitle: "Presented at Wolf Pack Symposium 2023",
+
+  date: "September 2023 - December 2023",
+  purpose: "Undergraduate Research Synthesis",
+  roles: ["Undergraduate Researcher", "Data Visualizer", "Author"],
+
+  image: Yeast,
+  description: "A synthesis of a semester-long public health research project modeling \
+  the aging of yeast. I utilized the R language and MSStats to visualize a proteomic data set \
+  of yeast samples. Our results verified that the aging cycles of yeast are similar to that of humans, \
+  and that further research on human aging using yeast instead of human cells may be viable.",
+  skills: ["R", "MSStats", "Data Visualization", "Academic Writing"],
+}
+
 export const professional : ProjectViewProps[] = [
-  birdgame, liondragon, mobalytics
+  birdgame, liondragon, mobalytics, research
 ];
 
 export const games : ProjectViewProps[] = [
