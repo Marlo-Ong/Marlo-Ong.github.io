@@ -28,11 +28,11 @@ function App() {
           <div className={classes.aboutMeTexts}>
             <h1>Hey!</h1>
             <span>
-              I'm a video game developer from Las Vegas, Nevada and now based in Reno.
-              I'm most experienced in the Unity game engine, though I've also dabbled with
+              I'm a video game developer from Las Vegas, Nevada, attending the University of Nevada, Reno.
+              I'm love working in the Unity game engine, though I have experience
               Godot and Raylib. Below I've compiled a collection of my professional
               and educational work, Blender 3D animations, musical compositions, and
-              self-made video games that are published to the web.
+              self-made video games that you can start playing immediately.
             </span>
           </div>
           <div className={classes.aboutMeImage}>

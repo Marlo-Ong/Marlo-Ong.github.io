@@ -70,6 +70,19 @@ export function itchIO(link: string)
   return <SocialLink {...itchioProps}/>
 }
 
+export function ActionLink(link: string, title: string)
+{
+  var linkProps : SocialLinkProps = {
+    link: link,
+    alttext: title,
+    image: YoutubeLogo,
+    domain: title
+    }
+
+  linkProps.cssClasses = [socialLinkClasses.actionButton]
+  return <SocialLink {...linkProps}/>
+}
+
 export function Youtube(link: string, isActionButton: boolean = true, title?: string)
 {
   var youtubeProps : SocialLinkProps = {

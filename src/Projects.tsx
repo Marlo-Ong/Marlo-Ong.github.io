@@ -1,5 +1,5 @@
 import { ProjectViewProps } from "./common/types";
-import { Github, Google, Youtube, itchIO } from "./Socials";
+import { ActionLink, Github, Google, Youtube, itchIO } from "./Socials";
 
 import Kuddelmuddel from "./public/kuddelmuddel.png"
 import Arecibo from "./public/arecibo.png"
@@ -16,6 +16,7 @@ import FrutigerAero from "./public/frutiger.png"
 import BirdGame from "./public/birdgame.jpg"
 import CS381GIF from "./public/cs381.png"
 import Yeast from "./public/Yeast Poster 2023.png"
+import Mobalytics from "./public/mobalytics.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -297,7 +298,7 @@ const frutigeraero : ProjectViewProps = {
 
 // Professional Projects
 const birdgame : ProjectViewProps = {
-  name: "Unreleased ManaWorks Game",
+  name: "ManaWorks Game",
   subtitle: "Live life as a bird in this upcoming MMO.",
 
   date: "May 2024 - August 2024",
@@ -307,7 +308,8 @@ const birdgame : ProjectViewProps = {
   description: [
     "Created an interface to monitor and display FPS, memory, in-game stats, and profiling stats within several different UI systems.",
     "Analyzed and fixed performance bottlenecks/regressions in CPU/GPU.",
-    "Developed an semi-automated process for weekly benchmarking of game performance"
+    "Developed an automated process for weekly benchmarking of game performance.",
+    "Designed an interface to improve workflow of complex audio behaviors."
   ],
   image: BirdGame,
   skills: ["UI/UX", "Game Optimization", "Performance Profiling", "Memory Management", "Data Structures and Algorithms"],
@@ -334,6 +336,7 @@ const liondragon : ProjectViewProps = {
 const mobalytics : ProjectViewProps = {
   name: "Mobalytics Synthesis Presentation",
   subtitle: "\"Card Games Are Solved Games\"",
+  image: Mobalytics,
 
   date: "November 2024 - December 2024",
   purpose: "Mobalytics - Winter 2023 Externship",
@@ -350,11 +353,11 @@ const mobalytics : ProjectViewProps = {
 
 // Class Projects
 const cs381 : ProjectViewProps = {
-  name: "The CS381 Collection",
+  name: "CS381 Weekly Projects",
   subtitle: "Ships and planes!",
 
   date: "January 2024 - May 2024",
-  purpose: "CS3381 (Game Engine Architectures) Weekly Projects",
+  purpose: "CS381 (Game Engine Architectures) at UNR",
   roles: ["Game Programmer", "Audio Engineer"],
 
   description: "A repository of 12 demoable assignments that demonstrate an understanding of \
@@ -410,6 +413,24 @@ const research : ProjectViewProps = {
   skills: ["R", "MSStats", "Data Visualization", "Academic Writing"],
 }
 
+const foldominium : ProjectViewProps = {
+  name: "Foldominium",
+  subtitle: "Share your origami creations fast!",
+
+  date: "June 2024 - August 2024",
+  purpose: "TechWise Course 3 Capstone Project",
+  roles: ["Front-End Developer", "Designer", "DevOps Engineer"],
+
+  description: "Designed and deployed a website with a machine \
+  learning model that creates origami folding tutorials from of an \
+  object prompt.",
+  skills: ["Figma", "AWS", "React/Vite", "Github Workflows", "CI/CD"],
+  socials: [
+    Github("https://github.com/elenachau/foldominium"), 
+    ActionLink("foldominium.com", "Foldominium")
+  ]
+}
+
 export const professional : ProjectViewProps[] = [
   birdgame, liondragon, mobalytics, research
 ];
@@ -425,5 +446,5 @@ export const videos : ProjectViewProps[] = [
 ]
 
 export const software : ProjectViewProps[] = [
-  arecibo, portfolio, slideshowmaker
+  arecibo, portfolio, slideshowmaker, foldominium
 ]
