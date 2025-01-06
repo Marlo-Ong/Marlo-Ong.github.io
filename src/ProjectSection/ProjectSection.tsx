@@ -5,14 +5,14 @@ import { ProjectSectionProps } from "../common/types";
 import classes from "./ProjectSection.module.css"
 import { RibbonBanner } from "../Utils/RibbonBanner";
 
-const distributeIntoColumns = <T, >(items: T[], numOfColumns: number): T[][] => {
-    const columns: T[][] = Array.from({ length: numOfColumns }, () => []);
-    items.forEach((item, index) => {
-        columns[index % numOfColumns].push(item);
-    });
-    return columns;
-  }
-  
+const distributeIntoColumns = <T,>(items: T[], numOfColumns: number): T[][] => {
+  const columns: T[][] = Array.from({ length: numOfColumns }, () => []);
+  items.forEach((item, index) => {
+    columns[index % numOfColumns].push(item);
+  });
+  return columns;
+}
+
 // Fisher-Yates
 const shuffleArray = (array: any[]) => {
   let shuffledArray = array.slice(); // Create a copy of the array
@@ -29,17 +29,17 @@ const shuffleProjects = (array: any[]) => {
   return (shuffleArray(favorites).concat(shuffleArray(nonFavorites)));
 };
 
-export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, description, projects }: ProjectSectionProps) => {
+export const ProjectSection: React.FC<ProjectSectionProps> = ({ title, description, projects }: ProjectSectionProps) => {
   const [numOfColumns, setNumOfColumns] = useState(1);
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 1200) {
-          setNumOfColumns(3);
+        setNumOfColumns(3);
       } else if (window.innerWidth >= 800) {
-          setNumOfColumns(2);
+        setNumOfColumns(2);
       } else {
-          setNumOfColumns(1);
+        setNumOfColumns(1);
       }
     }
 
@@ -51,7 +51,7 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
 
     // Cleanup function
     return () => {
-        window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -64,20 +64,20 @@ export const ProjectSection : React.FC<ProjectSectionProps> = ({ title, descript
           title: title,
           text: description
         }
-      }/>
+      } />
 
       <div className={classes.projectsView}>
         {columns.map((column, columnIndex) => (
           <div key={columnIndex} className={classes.column}>
-            {column.map((args) => (<Project {...args}/>))}
+            {column.map((args) => (<Project {...args} />))}
           </div>
         ))}
       </div>
     </div>
   )
 }
-  
-const gamesProjectSection : ProjectSectionProps = {
+
+const gamesProjectSection: ProjectSectionProps = {
   title: "Video Games",
   // description: "A collection of short games I've made. \
   // Most of them utilize the Unity game engine. All of them are \
@@ -86,24 +86,24 @@ const gamesProjectSection : ProjectSectionProps = {
   projects: games
 }
 
-const videosProjectSection : ProjectSectionProps = {
-  title: "3D Animations",
+const videosProjectSection: ProjectSectionProps = {
+  title: "Videos and 3D Animations",
   // description: "My 3D animations and video editing projects \
   // dating as far back as 2021. All of these videos utilize Blender 3D \
   // and are typically backed by even older musical compositions I wrote.",
   projects: videos
 }
 
-const professionalProjectSection : ProjectSectionProps = {
+const professionalProjectSection: ProjectSectionProps = {
   title: "Professional Work",
   projects: professional
 }
 
-const softwareProjectSection : ProjectSectionProps = {
+const softwareProjectSection: ProjectSectionProps = {
   title: "Software",
   projects: software
 }
 
-export const projectSections : ProjectSectionProps[] = [
+export const projectSections: ProjectSectionProps[] = [
   professionalProjectSection, gamesProjectSection, softwareProjectSection, videosProjectSection,
 ]

@@ -17,6 +17,10 @@ import BirdGame from "./public/birdgame.jpg"
 import CS381GIF from "./public/cs381.png"
 import Yeast from "./public/Yeast Poster 2023.png"
 import Mobalytics from "./public/mobalytics.png"
+import Brainrot from "./public/brainrot.png"
+import Compositions from "./public/compositions.jpg"
+import Foldominium from "./public/foldominium.png"
+import TurtleMatch from "./public/turtlematch.jpeg"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -31,10 +35,10 @@ import ParisianDremaGIF from "./public/parisiandream.gif"
 import SillinessGIF from "./public/silliness.gif"
 
 // Games
-const kuddelmuddel : ProjectViewProps = {
+const kuddelmuddel: ProjectViewProps = {
   name: "Kuddelmuddel",
   subtitle: "Grow weeds and take over the Earth!",
-  
+
   date: "June 2023 - August 2023",
   purpose: "Techwise Course 1 Capstone Project",
   roles: ["Game Programmer", "Audio Engineer"],
@@ -47,7 +51,7 @@ const kuddelmuddel : ProjectViewProps = {
     gif: KuddelmuddelGIF
   },
   skills: ["Unity", "C#", "Data Structures", "UI/UX"],
-  
+
   socials: [
     Github("https://github.com/elenachau/techwise-kuddelmuddel"),
     Youtube("https://www.youtube.com/watch?v=_nOwZ7wz6nY", false, "Trailer"),
@@ -55,7 +59,7 @@ const kuddelmuddel : ProjectViewProps = {
   ],
 }
 
-const arecibo : ProjectViewProps = {
+const arecibo: ProjectViewProps = {
   name: "Project Arecibo",
   subtitle: "Send messages to the future.",
 
@@ -79,7 +83,7 @@ const arecibo : ProjectViewProps = {
   ],
 }
 
-const wordhunt : ProjectViewProps = {
+const wordhunt: ProjectViewProps = {
   name: "Word Hunt Recreated",
   subtitle: "The classic GamePigeon game, now on the Web.",
 
@@ -103,7 +107,7 @@ const wordhunt : ProjectViewProps = {
   ],
 }
 
-const infinitrivia : ProjectViewProps = {
+const infinitrivia: ProjectViewProps = {
   name: "Infinitrivia",
   subtitle: "Limitless trivia powered by ChatGPT.",
   favorite: true,
@@ -125,14 +129,14 @@ const infinitrivia : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/infinitrivia"), itchIO("infinitrivia")],
 }
 
-const soupasaurus : ProjectViewProps = {
+const soupasaurus: ProjectViewProps = {
   name: "Soupasaurus",
   subtitle: "What kind of soup would you be?",
   favorite: true,
 
   date: "April 2024",
   purpose: "\"LA Hacks 2024\" Entry",
-  roles: ["Game Programmer", "Front-End Developer"],
+  roles: ["Game Programmer", "Front-End Developer", "Composer"],
 
   description: "Made in collaboration with University of California, San Diego students. I wrote inspector tools to interface \
   Unity C# scripting with the editor, facilitating an easier design and animation workflow for our front-end developers. \
@@ -147,7 +151,7 @@ const soupasaurus : ProjectViewProps = {
     itchIO("soupasaurus")],
 }
 
-const sillybilly : ProjectViewProps = {
+const sillybilly: ProjectViewProps = {
   name: "Silly Billies's Chromatic Chaos",
   subtitle: "Bureacracy for iPad kids!",
 
@@ -171,8 +175,29 @@ const sillybilly : ProjectViewProps = {
     itchIO("silly-billiess-chromatic-chaos")],
 }
 
+const brainrotsimulator: ProjectViewProps = {
+  name: "Ultimate Brainrot Simulator",
+  subtitle: "Play 5 minutes to destroy your attention span!",
+  favorite: true,
+
+  date: "November 2024",
+  purpose: "\"brainrot jia.seed hackathon\" Entry",
+  roles: ["Solo Game Programmer"],
+
+  description: "My entry into the first ever \"brainrot\"-themed hackathon. It's an abomination (pretty self-explanatory).",
+  image: Brainrot,
+  skills: ["Unity", "C#", "Sound Design", "UI/UX", "Mobile Development"],
+
+  socials: [
+    Github("https://github.com/Marlo-Ong/brainrot-game"),
+    Youtube("https://youtu.be/Y6QpGfrzhZU", false, "Demo"),
+    Google("https://devpost.com/software/ultimate-brainrotting-simulator", "Devpost", false),
+    itchIO("ultimate-brainrot-simulator")
+  ]
+}
+
 // 3D Animations
-const epilogue : ProjectViewProps = {
+const epilogue: ProjectViewProps = {
   name: "Epilogue",
   subtitle: "A journey of a sphere in space.",
   favorite: true,
@@ -190,7 +215,7 @@ const epilogue : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=nCfQIgI1Hks")],
 }
 
-const minimal : ProjectViewProps = {
+const minimal: ProjectViewProps = {
   name: "Minimal",
   subtitle: "Instruments-in-a-box!",
 
@@ -210,7 +235,7 @@ const minimal : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
 }
 
-const silliness : ProjectViewProps = {
+const silliness: ProjectViewProps = {
   name: "Silliness",
   subtitle: "A quadrilateral visualization.",
 
@@ -230,7 +255,7 @@ const silliness : ProjectViewProps = {
   socials: [Youtube("https://youtu.be/wbcT1ex_PB8?si=e_rFKh5GoXzobQNe")],
 }
 
-const nonsensical : ProjectViewProps = {
+const nonsensical: ProjectViewProps = {
   name: "Nonsensical",
   subtitle: "What does it mean?",
   favorite: true,
@@ -252,7 +277,7 @@ const nonsensical : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=J3nH6R0C1EE")],
 }
 
-const parisiandream : ProjectViewProps = {
+const parisiandream: ProjectViewProps = {
   name: "Parisian Dream",
   subtitle: "A dreary poem.",
 
@@ -273,7 +298,7 @@ const parisiandream : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=qw3ZKqMqG_g")],
 }
 
-const frutigeraero : ProjectViewProps = {
+const frutigeraero: ProjectViewProps = {
   name: "Frutiger Aero",
   subtitle: "A 2000s-era aesthetic.",
   favorite: true,
@@ -296,8 +321,27 @@ const frutigeraero : ProjectViewProps = {
   socials: [Youtube("https://www.youtube.com/watch?v=YPpdxCmrk_0")],
 }
 
+const compositions31: ProjectViewProps = {
+  name: "The 31-Day Composition Challenge",
+  subtitle: "A compilation of music I made at 15.",
+  favorite: true,
+
+  date: "June 2019 - July 2019",
+  purpose: "Personal Project",
+  roles: ["Composer", "Video Editor"],
+
+  description: "In 2019, attending a performing arts academy, I challenged myself \
+  to compose a piece of music every day for a month as a way to improve as a composer \
+  through consistency. Although many of the compositions were left unfinished, many \
+  turned out to be full-fleshed pieces that I am still proud of many years later.",
+  image: Compositions,
+  skills: ["Music Composition", "Musescore"],
+
+  socials: [Youtube("https://youtu.be/HRTwcDBPX_Q")]
+}
+
 // Professional Projects
-const birdgame : ProjectViewProps = {
+const birdgame: ProjectViewProps = {
   name: "ManaWorks Game",
   subtitle: "Live life as a bird in this upcoming MMO.",
 
@@ -317,8 +361,8 @@ const birdgame : ProjectViewProps = {
   socials: [Google("https://mana.works/", "Dev Page", true)],
 }
 
-const liondragon : ProjectViewProps = {
-  name: "LionDragon Studios Game",
+const liondragon: ProjectViewProps = {
+  name: "Little Turtle Match",
   subtitle: "A language-learning mobile game for kids.",
 
   date: "January 2024 - May 2024",
@@ -330,10 +374,13 @@ const liondragon : ProjectViewProps = {
     "Created tools for designers to add interactive animations to objects",
     "Implemented reactive audio feedback for player input"
   ],
+  image: TurtleMatch,
   skills: ["UI/UX", "Game Programming", "Mobile Development"],
+
+  socials: [Youtube("https://apps.apple.com/us/app/little-turtle-match/id1577269472", true, "App Store")]
 }
 
-const mobalytics : ProjectViewProps = {
+const mobalytics: ProjectViewProps = {
   name: "Mobalytics Synthesis Presentation",
   subtitle: "\"Card Games Are Solved Games\"",
   image: Mobalytics,
@@ -352,7 +399,7 @@ const mobalytics : ProjectViewProps = {
 }
 
 // Class Projects
-const cs381 : ProjectViewProps = {
+const cs381: ProjectViewProps = {
   name: "CS381 Weekly Projects",
   subtitle: "Ships and planes!",
 
@@ -369,7 +416,7 @@ const cs381 : ProjectViewProps = {
 }
 
 // Software
-const portfolio : ProjectViewProps = {
+const portfolio: ProjectViewProps = {
   name: "Portfolio Website",
   subtitle: "You're looking at it!",
 
@@ -382,7 +429,7 @@ const portfolio : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/Marlo-Ong.github.io")]
 }
 
-const slideshowmaker : ProjectViewProps = {
+const slideshowmaker: ProjectViewProps = {
   name: "Procedual Slideshow Maker",
   subtitle: "3D slideshow at your fingertips!",
 
@@ -397,7 +444,7 @@ const slideshowmaker : ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/google-blender-slideshow-maker")]
 }
 
-const research : ProjectViewProps = {
+const research: ProjectViewProps = {
   name: "Undergraudate Research Poster",
   subtitle: "Presented at Wolf Pack Symposium 2023",
 
@@ -413,7 +460,7 @@ const research : ProjectViewProps = {
   skills: ["R", "MSStats", "Data Visualization", "Academic Writing"],
 }
 
-const foldominium : ProjectViewProps = {
+const foldominium: ProjectViewProps = {
   name: "Foldominium",
   subtitle: "Share your origami creations fast!",
 
@@ -424,27 +471,30 @@ const foldominium : ProjectViewProps = {
   description: "Designed and deployed a website with a machine \
   learning model that creates origami folding tutorials from of an \
   object prompt.",
+  image: Foldominium,
   skills: ["Figma", "AWS", "React/Vite", "Github Workflows", "CI/CD"],
   socials: [
-    Github("https://github.com/elenachau/foldominium"), 
+    Github("https://github.com/elenachau/foldominium"),
     ActionLink("foldominium.com", "Foldominium")
   ]
 }
 
-export const professional : ProjectViewProps[] = [
+export const professional: ProjectViewProps[] = [
   birdgame, liondragon, mobalytics, research
 ];
 
-export const games : ProjectViewProps[] = [
+export const games: ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, cs381,
+  brainrotsimulator,
 ];
 
-export const videos : ProjectViewProps[] = [
+export const videos: ProjectViewProps[] = [
   epilogue, minimal, silliness,
-  nonsensical, parisiandream, frutigeraero
+  nonsensical, parisiandream, frutigeraero,
+  compositions31,
 ]
 
-export const software : ProjectViewProps[] = [
+export const software: ProjectViewProps[] = [
   arecibo, portfolio, slideshowmaker, foldominium
 ]
