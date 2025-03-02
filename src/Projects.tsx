@@ -102,7 +102,7 @@ const wordhunt: ProjectViewProps = {
 
   socials: [
     Github("https://github.com/Marlo-Ong/word-hunt-recreated"),
-    Google("https://docs.google.com/document/d/1wPYATW8UgB-PooRN8VOaTBGCO1oJWUF2bV40hNSuLy0/edit?usp=sharing", "Guide", false),
+    Google("https://mkingco.tech/word-hunt-recreated", "Blog", false),
     itchIO("gamepigeon-word-hunt")
   ],
 }
