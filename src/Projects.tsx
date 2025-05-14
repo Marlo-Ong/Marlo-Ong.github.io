@@ -437,6 +437,7 @@ const cs480: ProjectViewProps = {
 const sketchscape: ProjectViewProps = {
   name: "Sketchscape VR",
   subtitle: "Relax and draw in virtual reality!",
+  favorite: true,
 
   date: "April 2025 - May 2025",
   purpose: "CS/PSY 484 (Virtual Reality) Final Project",
