@@ -21,6 +21,7 @@ import Brainrot from "./public/brainrot.png"
 import Compositions from "./public/compositions.jpg"
 import Foldominium from "./public/foldominium.png"
 import TurtleMatch from "./public/turtlematch.jpeg"
+import Sketchscape from "./public/sketchscape-game-screenshot.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -433,6 +434,23 @@ const cs480: ProjectViewProps = {
   ]
 }
 
+const sketchscape: ProjectViewProps = {
+  name: "Sketchscape VR",
+  subtitle: "Relax and draw in virtual reality!",
+
+  date: "April 2025 - May 2025",
+  purpose: "CS/PSY 484 (Virtual Reality) Final Project",
+  roles: ["Game Programmer"],
+
+  description: "A group project made for my inter-disciplinary virtual reality class at UNR. \
+  The challenge was to innovate VR/XR systems that are intuitive and adhere to known \
+  psychological, biological, and physiological tendencies of humans. Mainly worked on the \
+  paint-drawing functionality, as well as implementing tactile/audio feedback while painting.",
+  image: Sketchscape,
+  skills: ["Unity", "C#", "Unity XR Toolkit", "UI/UX"],
+  socials: [Github("https://github.com/Marlo-Ong/sketchscape-vr.git")]
+}
+
 // Software
 const portfolio: ProjectViewProps = {
   name: "Portfolio Website",
@@ -504,7 +522,7 @@ export const professional: ProjectViewProps[] = [
 export const games: ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, cs381,
-  brainrotsimulator, cs480
+  brainrotsimulator, cs480, sketchscape
 ];
 
 export const videos: ProjectViewProps[] = [
