@@ -415,6 +415,24 @@ const cs381: ProjectViewProps = {
   socials: [Github("https://github.com/Marlo-Ong/cs381-game-architecture.git")]
 }
 
+const cs480: ProjectViewProps = {
+  name: "Solar System Exploration Game",
+  subtitle: "Outer Space, powered by OpenGL!",
+
+  date: "May 2025",
+  purpose: "CS480 (Computer Graphics) Term Project",
+  roles: ["Game Programmer"],
+
+  description: "Created a graphics application to model the solar system using the GLFW library with OpenGL. \
+  Programmed ground-up lighting, texturing, and  MVP rendering logic with custom shader code, \
+  complete with an implemetation of a parent-child transform hierarchy and procedural mesh generation (spheres).",
+  skills: ["C++", "OpenGL", "GLFW/GLEW/GLM", "Assimp", "SOIL2", "Computer Graphics", "Game Engines"],
+  socials: [Github("https://github.com/Marlo-Ong/cs480-solar-system-game"),
+  Youtube("https://youtu.be/iw9dAg2GrkM", false, "Implementation"),
+  Youtube("https://youtu.be/Qe0GiDvA9_8", true, "Demo")
+  ]
+}
+
 // Software
 const portfolio: ProjectViewProps = {
   name: "Portfolio Website",
@@ -486,7 +504,7 @@ export const professional: ProjectViewProps[] = [
 export const games: ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, cs381,
-  brainrotsimulator,
+  brainrotsimulator, cs480
 ];
 
 export const videos: ProjectViewProps[] = [
