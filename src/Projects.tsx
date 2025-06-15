@@ -22,6 +22,7 @@ import Compositions from "./public/compositions.jpg"
 import Foldominium from "./public/foldominium.png"
 import TurtleMatch from "./public/turtlematch.jpeg"
 import Sketchscape from "./public/sketchscape-game-screenshot.png"
+import SolarSystem from "./public/solarsystem.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -345,6 +346,7 @@ const compositions31: ProjectViewProps = {
 const birdgame: ProjectViewProps = {
   name: "ManaWorks Game",
   subtitle: "Live life as a bird in this upcoming MMO.",
+  favorite: true,
 
   date: "May 2024 - August 2024",
   purpose: "ManaWorks Inc. - Summer 2024 Internship",
@@ -365,6 +367,7 @@ const birdgame: ProjectViewProps = {
 const liondragon: ProjectViewProps = {
   name: "Little Turtle Match",
   subtitle: "A language-learning mobile game for kids.",
+  favorite: true,
 
   date: "January 2024 - May 2024",
   purpose: "LionDragon Studios - Spring 2024 Internship",
@@ -427,6 +430,7 @@ const cs480: ProjectViewProps = {
   description: "Created a graphics application to model the solar system using the GLFW library with OpenGL. \
   Programmed ground-up lighting, texturing, and  MVP rendering logic with custom shader code, \
   complete with an implemetation of a parent-child transform hierarchy and procedural mesh generation (spheres).",
+  image: SolarSystem,
   skills: ["C++", "OpenGL", "GLFW/GLEW/GLM", "Assimp", "SOIL2", "Computer Graphics", "Game Engines"],
   socials: [Github("https://github.com/Marlo-Ong/cs480-solar-system-game"),
   Youtube("https://youtu.be/iw9dAg2GrkM", false, "Implementation"),
