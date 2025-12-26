@@ -23,6 +23,7 @@ import Foldominium from "./public/foldominium.png"
 import TurtleMatch from "./public/turtlematch.jpeg"
 import Sketchscape from "./public/sketchscape-game-screenshot.png"
 import SolarSystem from "./public/solarsystem.png"
+import EightStack from "./public/eightstack.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -134,7 +135,6 @@ const infinitrivia: ProjectViewProps = {
 const soupasaurus: ProjectViewProps = {
   name: "Soupasaurus",
   subtitle: "What kind of soup would you be?",
-  favorite: true,
 
   date: "April 2024",
   purpose: "\"LA Hacks 2024\" Entry",
@@ -195,6 +195,27 @@ const brainrotsimulator: ProjectViewProps = {
     Youtube("https://youtu.be/Y6QpGfrzhZU", false, "Demo"),
     Google("https://devpost.com/software/ultimate-brainrotting-simulator", "Devpost", false),
     itchIO("ultimate-brainrot-simulator")
+  ]
+}
+
+const eightstack: ProjectViewProps = {
+  name: "8-Stack",
+  subtitle: "Who can puzzle the fastest?",
+  favorite: true,
+
+  date: "September 2025",
+  purpose: "CS 481 (AI in Games) Project",
+  roles: ["Solo Game Programmer"],
+
+  description: "My take on a school assignment to implement our own version of the 8-tile sliding puzzle game. \
+  Inspired by Tetris 99, this game demonstrates both BFS- and DFS-based exhaustive search algorithms a solve a given board state. \
+  This is used to implement both an AI opponent as well as a player upgrade that aids the player to the goal. \
+  Implemented catch-up mechanics with adaptive AI speed and adaptive player powerup spawns based on a player's lead or deficit.",
+  image: EightStack,
+  skills: ["Unity", "C#", "Game AI"],
+
+  socials: [
+    itchIO("8-stack")
   ]
 }
 
@@ -527,7 +548,8 @@ export const professional: ProjectViewProps[] = [
 export const games: ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, cs381,
-  brainrotsimulator, cs480, sketchscape
+  brainrotsimulator, cs480, sketchscape,
+  eightstack,
 ];
 
 export const videos: ProjectViewProps[] = [
