@@ -44,7 +44,7 @@
 }
 
 .aboutMeTexts {
-    flex-basis: 40%;
+    flex-basis: 100%;
     font-size: clamp(12px, 1.4vw, 20px);
 }
 
@@ -54,6 +54,7 @@
 }
 
 .aboutMeImage img {
+    width: 500px;
     max-width: 100%;
 }
 
