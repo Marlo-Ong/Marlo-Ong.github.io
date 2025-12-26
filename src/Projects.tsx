@@ -25,6 +25,9 @@ import Sketchscape from "./public/sketchscape-game-screenshot.png"
 import SolarSystem from "./public/solarsystem.png"
 import EightStack from "./public/eightstack.png"
 import Cadenza from "./public/cadenza.jpg"
+import Melting from "./public/melting.png"
+import Quasar from "./public/quasar.png"
+import Scrolling from "./public/scrolling.png"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -254,7 +257,7 @@ const epilogue: ProjectViewProps = {
   during the pandemic, the animation follows pieces of a whole that are forced apart, but eventually come back together. \
   I created the orchestral arrangement of Bill Evans's \"Epilogue\", using personal recordings of bells, shakers, and my own voice for texture.",
   image: Epilogue,
-  skills: ["Blender", "Cakewalk DAW", "Musescore", "DaVinci Resolve", "Recording/Mixing/Mastering"],
+  skills: ["Blender 3D", "Cakewalk DAW", "Musescore", "DaVinci Resolve", "Recording/Mixing/Mastering"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=nCfQIgI1Hks")],
 }
@@ -274,7 +277,7 @@ const minimal: ProjectViewProps = {
     staticImg: Minimal,
     gif: MinimalGIF
   },
-  skills: ["Blender", "Musescore"],
+  skills: ["Blender 3D", "Musescore"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=AZksMRi_VZ4")],
 }
@@ -294,7 +297,7 @@ const silliness: ProjectViewProps = {
     staticImg: Silliness,
     gif: SillinessGIF
   },
-  skills: ["Blender", "Cakewalk", "DaVinci Resolve"],
+  skills: ["Blender 3D", "Cakewalk", "DaVinci Resolve"],
 
   socials: [Youtube("https://youtu.be/wbcT1ex_PB8?si=e_rFKh5GoXzobQNe")],
 }
@@ -316,7 +319,7 @@ const nonsensical: ProjectViewProps = {
     staticImg: Nonsensical,
     gif: NonsensicalGIF
   },
-  skills: ["Blender", "REAPER", "Musescore", "DaVinci Resolve", "Audio Mixing"],
+  skills: ["Blender 3D", "REAPER", "Musescore", "DaVinci Resolve", "Audio Mixing"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=J3nH6R0C1EE")],
 }
@@ -337,7 +340,7 @@ const parisiandream: ProjectViewProps = {
     staticImg: ParisianDream,
     gif: ParisianDremaGIF
   },
-  skills: ["Blender", "Synthesizer V Studio Basic", "Voice Synthesis", "DaVinci Resolve", "REAPER"],
+  skills: ["Blender 3D", "Synthesizer V Studio Basic", "Voice Synthesis", "DaVinci Resolve", "REAPER"],
 
   socials: [Youtube("https://www.youtube.com/watch?v=qw3ZKqMqG_g")],
 }
@@ -368,7 +371,6 @@ const frutigeraero: ProjectViewProps = {
 const compositions31: ProjectViewProps = {
   name: "The 31-Day Composition Challenge",
   subtitle: "A compilation of music I made at 15.",
-  favorite: true,
 
   date: "June 2019 - July 2019",
   purpose: "Personal Project",
@@ -382,6 +384,59 @@ const compositions31: ProjectViewProps = {
   skills: ["Music Composition", "Musescore"],
 
   socials: [Youtube("https://youtu.be/HRTwcDBPX_Q")]
+}
+
+const scrolling: ProjectViewProps = {
+  name: "Scrolling",
+  subtitle: "Life in the phone.",
+  favorite: true,
+
+  date: "September 2025",
+  purpose: "ART345 (Sound and Image) Project 1",
+  roles: ["Video Editor", "3D Animator"],
+
+  description: "An attempt to embody the trapped feeling of loneliness, melancholy, \
+  and inevitability that comes from a chronic screen addiction. Backed by Inspiração by Garoto.",
+  image: Scrolling,
+  skills: ["3D Animation", "Blender 3D", "Adobe Premiere Pro"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=Vai4ookvFfg")]
+}
+
+const quasar: ProjectViewProps = {
+  name: "Quasar",
+  subtitle: "A play with light.",
+  favorite: true,
+
+  date: "October 2025",
+  purpose: "ART345 (Sound and Image) Project 2",
+  roles: ["Composer", "Video Editor"],
+
+  description: "This assignment challenges us to hand-record video and change its meaning via \
+  video editing (cuts, distortions, effects) and an audio sountrack. Uses a glass jar to play \
+  with light, exaggerated by volumetric lighting effects and color grading.",
+  image: Quasar,
+  skills: ["Voltage Modular", "Modular Synthesis", "Adobe Premiere Pro"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=RfQzirQ_Kbw")]
+}
+
+const melting: ProjectViewProps = {
+  name: "Melting",
+  subtitle: "What am I looking at?",
+
+  date: "November 2025",
+  purpose: "ART345 (Sound and Image) Project 3",
+  roles: ["Performer", "Video Editor"],
+
+  description: "My goal with this was to combine the prowess of TouchDesigner's real-time visual generation and Voltage Modular's \
+  highly tunable audio effects and instrumentation using MIDI. I was able to map the knobs and keys on my MIDI keyboard simultaneously to \
+  visual (TouchDesigner) distortions and audio (Voltage Modular) distortions, creating a workflow for a real-time music performance \
+  that acts as a soundtrack or driver for a unique video.",
+  image: Melting,
+  skills: ["Voltage Modular", "Modular Synthesis", "TouchDesigner"],
+
+  socials: [Youtube("https://www.youtube.com/watch?v=6aiB8oKpiuA")]
 }
 
 // Professional Projects
@@ -557,7 +612,6 @@ const foldominium: ProjectViewProps = {
   skills: ["Figma", "AWS", "React/Vite", "Github Workflows", "CI/CD"],
   socials: [
     Github("https://github.com/elenachau/foldominium"),
-    ActionLink("foldominium.com", "Foldominium")
   ]
 }
 
@@ -575,7 +629,7 @@ export const games: ProjectViewProps[] = [
 export const videos: ProjectViewProps[] = [
   epilogue, minimal, silliness,
   nonsensical, parisiandream, frutigeraero,
-  compositions31,
+  compositions31, melting, quasar, scrolling
 ]
 
 export const software: ProjectViewProps[] = [
