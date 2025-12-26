@@ -24,6 +24,7 @@ import TurtleMatch from "./public/turtlematch.jpeg"
 import Sketchscape from "./public/sketchscape-game-screenshot.png"
 import SolarSystem from "./public/solarsystem.png"
 import EightStack from "./public/eightstack.png"
+import Cadenza from "./public/cadenza.jpg"
 
 import InfinitriviaGIF from "./public/infinitrivia.gif"
 import SillyBillyGIF from "./public/sillybilly.gif"
@@ -216,6 +217,26 @@ const eightstack: ProjectViewProps = {
 
   socials: [
     itchIO("8-stack")
+  ]
+}
+
+const cadenza: ProjectViewProps = {
+  name: "Cadenza",
+  subtitle: "Multiplayer! Rhythm! Combat!",
+  favorite: true,
+
+  date: "August 2025 - Present",
+  purpose: "UNR Computer Science Capstone Project",
+  roles: ["Game Programmer", "Audio Engineer"],
+
+  description: "Capstone project for my final senior year at UNR. Worked in a team of 4 to produce a \
+  local multiplayer rhythm game (Hi-Fi Rush meets Castle Crashers!), using FMOD as our audio middleware.",
+  image: Cadenza,
+  skills: ["Unity", "C#", "FMOD"],
+
+  socials: [
+    Github("https://github.com/cadenza-11/cadenza-game"),
+    ActionLink("https://github.com/cadenza-11/cadenza-game/releases/tag/P4_DEMO", "Play now!"),
   ]
 }
 
@@ -462,7 +483,6 @@ const cs480: ProjectViewProps = {
 const sketchscape: ProjectViewProps = {
   name: "Sketchscape VR",
   subtitle: "Relax and draw in virtual reality!",
-  favorite: true,
 
   date: "April 2025 - May 2025",
   purpose: "CS/PSY 484 (Virtual Reality) Final Project",
@@ -549,7 +569,7 @@ export const games: ProjectViewProps[] = [
   infinitrivia, wordhunt, sillybilly,
   soupasaurus, kuddelmuddel, cs381,
   brainrotsimulator, cs480, sketchscape,
-  eightstack,
+  eightstack, cadenza,
 ];
 
 export const videos: ProjectViewProps[] = [
